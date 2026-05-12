@@ -50,9 +50,11 @@ No broad "solves NP" or "best at NP solvers" language belongs in this repository
 ```bash
 python3 -m pytest tests -q
 python3 scripts/run_public_evidence.py --output results/evidence_index.md
+python3 scripts/run_sdk_qubo_maxcut_campaign.py --sdk-path ../sdk/python --output-dir results/raw
 ```
 
 The script generates a readiness report from the benchmark manifest. Real benchmark runs should write raw JSONL records into `results/raw/` and regenerated reports into `results/`.
+The SDK campaign script uses the public `CatalystQClient.prepare_qubo` and `prepare_maxcut` surfaces, records exact-enumeration reference certificates, and can be rerun with `--execute-api` to validate a live Catalyst-Q endpoint.
 
 ## Repo Map
 
@@ -63,6 +65,7 @@ The script generates a readiness report from the benchmark manifest. Real benchm
 - `results/evidence_index.md`: generated readiness report.
 - `assets/charts/evidence_coverage.svg`: generated coverage chart.
 - `schemas/result.schema.json`: raw JSONL result record schema.
+- `results/raw/sdk_qubo_maxcut_smoke.jsonl`: first public SDK QUBO/Max-Cut evidence records.
 
 ## Source Discipline
 

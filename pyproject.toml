@@ -20,7 +20,7 @@ classifiers = [
 
 [project.scripts]
 catalyst-q-evidence = "catalyst_q_benchmarks.report:main"
+catalyst-q-sdk-campaign = "catalyst_q_benchmarks.sdk_campaign:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-

@@ -5,6 +5,3 @@ __pycache__/
 dist/
 build/
 *.egg-info/
-results/raw/*.jsonl
-!results/raw/.gitkeep
-
