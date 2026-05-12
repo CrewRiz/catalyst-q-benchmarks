@@ -54,7 +54,16 @@ python3 scripts/run_public_evidence.py --output results/evidence_index.md
 
 The script generates a readiness report from the benchmark manifest. Real benchmark runs should write raw JSONL records into `results/raw/` and regenerated reports into `results/`.
 
+## Repo Map
+
+- `benchmarks/suites.json`: accepted benchmark suites, baselines, metrics, validators, and claim targets.
+- `docs/benchmark_matrix.md`: why each track matters and what a publishable win means.
+- `docs/execution_protocol.md`: raw result schema and benchmark budget rules.
+- `docs/claims_policy.md`: language allowed before and after validated runs.
+- `results/evidence_index.md`: generated readiness report.
+- `assets/charts/evidence_coverage.svg`: generated coverage chart.
+- `schemas/result.schema.json`: raw JSONL result record schema.
+
 ## Source Discipline
 
 Public docs cite official benchmark or solver sources where possible. Proprietary algorithms, private proof text, internal state naming, and server implementation details do not belong here.
-
