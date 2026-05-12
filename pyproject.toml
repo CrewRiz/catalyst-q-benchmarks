@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "catalyst-q-benchmarks"
+version = "0.1.0"
+description = "Public evidence and benchmark harness for Catalyst-Q API claims."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "Apache-2.0"}
+authors = [{name = "Strategic Innovations"}]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering",
+]
+
+[project.scripts]
+catalyst-q-evidence = "catalyst_q_benchmarks.report:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

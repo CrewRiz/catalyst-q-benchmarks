@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/CrewRiz/catalyst-q-benchmarks/schemas/result.schema.json",
+  "title": "Catalyst-Q benchmark result record",
+  "type": "object",
+  "required": [
+    "suite_id",
+    "instance_id",
+    "instance_sha256",
+    "solver_id",
+    "solver_version",
+    "command",
+    "timeout_s",
+    "runtime_s",
+    "status",
+    "hardware",
+    "validator"
+  ],
+  "properties": {
+    "suite_id": {"type": "string"},
+    "instance_id": {"type": "string"},
+    "instance_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "solver_id": {"type": "string"},
+    "solver_version": {"type": "string"},
+    "command": {"type": "string"},
+    "seed": {"type": ["integer", "null"]},
+    "timeout_s": {"type": "number", "minimum": 0},
+    "runtime_s": {"type": "number", "minimum": 0},
+    "status": {
+      "type": "string",
+      "enum": ["optimal", "feasible", "infeasible", "unknown", "timeout", "error"]
+    },
+    "objective": {"type": ["number", "null"]},
+    "hardware": {"type": "object"},
+    "validator": {"type": "object"}
+  },
+  "additionalProperties": true
+}
+

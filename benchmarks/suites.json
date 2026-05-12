@@ -1,0 +1,140 @@
+{
+  "schema_version": "0.1.0",
+  "generated_on": "2026-05-12",
+  "claim_policy": "No best-in-class claim is publishable without raw artifacts, validators, baseline versions, hardware metadata, and reproducible scripts.",
+  "suites": [
+    {
+      "id": "sat_competition_main",
+      "domain": "SAT",
+      "priority": "tier_1",
+      "source": "SAT Competition",
+      "url": "https://satcompetition.github.io/",
+      "official_scope": "International SAT Competition benchmark tracks for propositional satisfiability solvers.",
+      "metrics": ["solved_count", "par2", "runtime_s", "memory_gb", "sat_assignment_valid", "unsat_proof_valid"],
+      "baselines": ["Kissat", "CaDiCaL", "CryptoMiniSat", "Mallob"],
+      "validators": ["DIMACS CNF parser", "SAT assignment checker", "DRAT/LRAT/FRAT proof checker where available"],
+      "claim_target": "Cost-normalized PAR-2 or time-to-valid-model on a named SAT Competition track."
+    },
+    {
+      "id": "maxsat_evaluation",
+      "domain": "MaxSAT",
+      "priority": "tier_1",
+      "source": "MaxSAT Evaluation",
+      "url": "https://maxsat-evaluations.github.io/",
+      "official_scope": "Annual evaluation of state-of-the-art open-source MaxSAT solvers and heterogeneous benchmarks.",
+      "metrics": ["solved_count", "objective", "optimality_status", "par2", "runtime_s", "model_valid"],
+      "baselines": ["Open-WBO", "MaxHS", "LMHS", "current evaluation entrants"],
+      "validators": ["WCNF parser", "hard-clause checker", "objective recomputation", "certificate checker where emitted"],
+      "claim_target": "Best objective or best cost-normalized solved count on a named complete or incomplete track."
+    },
+    {
+      "id": "tsplib95",
+      "domain": "TSP",
+      "priority": "tier_1",
+      "source": "TSPLIB95",
+      "url": "https://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/index.html",
+      "official_scope": "Canonical sample instances for TSP and related routing problems.",
+      "metrics": ["tour_length", "optimality_gap_pct", "runtime_s", "time_to_best_s", "tour_valid"],
+      "baselines": ["Concorde", "LKH-3", "OR-Tools routing"],
+      "validators": ["TSPLIB parser", "tour permutation checker", "distance recomputation", "known optimum comparison"],
+      "claim_target": "Best time-to-gap or cost-per-valid-tour on named TSPLIB subsets."
+    },
+    {
+      "id": "dimacs_tsp_challenge",
+      "domain": "TSP",
+      "priority": "tier_1",
+      "source": "DIMACS TSP Challenge",
+      "url": "https://dimacs.rutgers.edu/archive/Challenges/TSP/",
+      "official_scope": "Implementation challenge designed for reproducible TSP heuristic comparisons, scalability, robustness, and normalized reporting.",
+      "metrics": ["tour_length", "runtime_s", "memory_mb", "normalized_runtime", "scaling_curve"],
+      "baselines": ["DIMACS benchmark heuristic", "LKH-3", "Concorde where exact solve is feasible"],
+      "validators": ["DIMACS instance generator checksum", "tour checker", "standard report tuple checker"],
+      "claim_target": "Best scalability-adjusted tour quality on a named DIMACS TSP family."
+    },
+    {
+      "id": "or_library_mknap",
+      "domain": "Knapsack",
+      "priority": "tier_1",
+      "source": "OR-Library multidimensional knapsack",
+      "url": "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/mknapinfo.html",
+      "official_scope": "OR-Library test data sets for multidimensional knapsack problems.",
+      "metrics": ["objective", "optimality_gap_pct", "constraint_violation", "runtime_s", "feasible"],
+      "baselines": ["Gurobi", "SCIP", "OR-Tools CP-SAT", "specialized branch-and-bound"],
+      "validators": ["capacity checker", "objective recomputation", "known optimum comparison where available"],
+      "claim_target": "Best cost-normalized feasible objective or proof rate on named OR-Library MKP files."
+    },
+    {
+      "id": "hard_knapsack_pisinger",
+      "domain": "Knapsack",
+      "priority": "tier_2",
+      "source": "Pisinger hard knapsack families",
+      "url": "https://doi.org/10.1016/j.cor.2004.03.002",
+      "official_scope": "Hard 0-1 knapsack instance families designed to expose weaknesses in standard benchmark sets.",
+      "metrics": ["objective", "optimality_gap_pct", "runtime_s", "proof_status", "feasible"],
+      "baselines": ["specialized exact knapsack solvers", "SCIP", "Gurobi", "OR-Tools CP-SAT"],
+      "validators": ["capacity checker", "objective recomputation", "known optimum comparison"],
+      "claim_target": "Strong performance on hard families where standard small knapsack benchmarks are too easy."
+    },
+    {
+      "id": "biq_mac_maxcut_bqp",
+      "domain": "QUBO/Max-Cut",
+      "priority": "tier_1",
+      "source": "Biq Mac Library",
+      "url": "https://biqmac.aau.at/biqmaclib.html",
+      "official_scope": "Binary quadratic and Max-Cut instances for exact solution method testing.",
+      "metrics": ["cut_value", "bqp_objective", "optimality_gap_pct", "runtime_s", "solution_valid"],
+      "baselines": ["Biq Mac", "BiqCrunch", "BiqBin", "Gurobi", "SCIP", "D-Wave hybrid where accessible"],
+      "validators": ["edge cut recomputation", "BQP objective recomputation", "bound comparison"],
+      "claim_target": "Best cost-normalized time-to-best-known cut on named Biq Mac families."
+    },
+    {
+      "id": "qplib",
+      "domain": "QP/MIQP/MIQCP",
+      "priority": "tier_1",
+      "source": "QPLIB",
+      "url": "https://qplib.zib.de/",
+      "official_scope": "Quadratic programming instance library containing discrete and continuous QP instances.",
+      "metrics": ["objective", "optimality_gap_pct", "constraint_violation", "runtime_s", "status"],
+      "baselines": ["Gurobi", "SCIP", "HiGHS for supported convex QP", "BARON where licensed"],
+      "validators": ["objective recomputation", "constraint checker", "QPLIB best-known comparison"],
+      "claim_target": "Best developer-accessible QP/MIQP result on a named QPLIB subset."
+    },
+    {
+      "id": "miplib2017",
+      "domain": "MIP",
+      "priority": "tier_1",
+      "source": "MIPLIB 2017",
+      "url": "https://miplib.zib.de/",
+      "official_scope": "Standard mixed-integer programming library with a 240-instance benchmark set.",
+      "metrics": ["solved_count", "primal_gap", "dual_gap", "runtime_s", "status", "numerical_warnings"],
+      "baselines": ["Gurobi", "SCIP", "HiGHS", "CPLEX where licensed"],
+      "validators": ["MPS parser", "objective recomputation", "constraint checker", "MIPLIB status comparison"],
+      "claim_target": "Credibility benchmark for general optimization; not the first place to claim Catalyst-Q advantage."
+    },
+    {
+      "id": "qaplib",
+      "domain": "Quadratic Assignment",
+      "priority": "tier_2",
+      "source": "QAPLIB",
+      "url": "https://coral.ise.lehigh.edu/data-sets/qaplib/",
+      "official_scope": "Quadratic assignment problem library with problem instances and best known solutions.",
+      "metrics": ["objective", "optimality_gap_pct", "runtime_s", "assignment_valid"],
+      "baselines": ["Gurobi", "SCIP", "specialized QAP heuristics", "published QAPLIB best-known solutions"],
+      "validators": ["permutation checker", "objective recomputation", "best-known comparison"],
+      "claim_target": "High-value proof point for assignment-structured optimization if Catalyst-Q wins time-to-good-enough."
+    },
+    {
+      "id": "quantum_inspired_cost_comparison",
+      "domain": "Quantum-inspired optimization",
+      "priority": "tier_2",
+      "source": "Cloud/hardware competitor cost comparison",
+      "url": "https://aws.amazon.com/braket/pricing/",
+      "official_scope": "Cost-normalized comparison against public cloud quantum and quantum-inspired access models where terms allow.",
+      "metrics": ["cost_usd", "queue_time_s", "runtime_s", "solution_quality", "hardware_requirement"],
+      "baselines": ["AWS Braket devices/simulators", "D-Wave hybrid solvers", "Fujitsu Digital Annealer where accessible", "Toshiba SBM where accessible"],
+      "validators": ["invoice/pricing capture", "run metadata capture", "objective recomputation"],
+      "claim_target": "Lowest cost per validated solution for named optimization workloads."
+    }
+  ]
+}
+
