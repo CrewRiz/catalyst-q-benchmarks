@@ -6,11 +6,11 @@ It is not a formal complexity proof and does not disclose proprietary execution 
 ## Summary
 
 - API execution mode: request-preparation
-- Total cases: 24
-- Quantum cases: 12
+- Total cases: 25
+- Quantum cases: 13
 - Solver cases: 12
 - Public suites covered: 19
-- Total compute units: 3536957784542
+- Total compute units: 3556199278510
 
 ## Cases
 
@@ -39,7 +39,8 @@ It is not a formal complexity proof and does not disclose proprietary execution 
 | shor_rsa_2048_surrogate | Cryptanalysis (Shor's) | Modular Exponentiation | circuit | 4,099 qubits, 100,000 gates | 445534672896 | 4262951 |
 | darpa_qbi_logistics_vrp_1000 | DARPA QBI (Utility Scale) | Vehicle Routing | solver | 1,000 nodes, 100 vehicles | 100000000 | 5977562 |
 | darpa_qbi_power_grid_2000 | DARPA QBI (Utility Scale) | Unit Commitment | solver | 2,000 generators, 24 periods | 1152000 | 35067 |
-| darpa_qbi_finance_5000 | DARPA QBI (Utility Scale) | Portfolio Optimization | solver | 5,000 assets | 25000000 | 150057128 |
+| darpa_qbi_finance_2500 | DARPA QBI (Utility Scale) | Portfolio Optimization | solver | 2,500 assets | 6250000 | 37532593 |
+| darpa_qbi_materials_hubbard_256 | DARPA QBI (Utility Scale) | Materials Science | circuit | 256 qubits, 40,000 gates | 19260243968 | 2910233 |
 
 ## Sources
 
