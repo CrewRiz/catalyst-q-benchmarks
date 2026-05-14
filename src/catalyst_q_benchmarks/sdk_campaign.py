@@ -17,7 +17,7 @@ DEFAULT_INSTANCE_PATH = REPO_ROOT / "benchmarks" / "instances" / "qubo_maxcut_sm
 def run_sdk_qubo_maxcut_campaign(
     output_dir: Path,
     sdk_path: Optional[Path] = None,
-    base_url: str = "https://catalyst-q-sdk.strategic-innovations.workers.dev/v3turbo",
+    base_url: str = "https://api.strategic-innovations.ai/v3turbo",
     api_key: Optional[str] = None,
     execute_api: bool = False,
     timeout: float = 30.0,
@@ -269,7 +269,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     parser = argparse.ArgumentParser(description="Run Catalyst-Q SDK QUBO/Max-Cut evidence campaign.")
     parser.add_argument("--output-dir", default="results/raw", help="Directory for JSONL and Markdown artifacts.")
     parser.add_argument("--sdk-path", default=None, help="Optional path to local sdk/python checkout.")
-    parser.add_argument("--base-url", default="https://catalyst-q-sdk.strategic-innovations.workers.dev/v3turbo")
+    parser.add_argument("--base-url", default="https://api.strategic-innovations.ai/v3turbo")
     parser.add_argument("--api-key", default=None)
     parser.add_argument("--execute-api", action="store_true")
     parser.add_argument("--timeout", type=float, default=30.0)
@@ -289,4 +289,3 @@ def main(argv: Optional[List[str]] = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

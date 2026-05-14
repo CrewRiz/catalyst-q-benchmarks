@@ -4,10 +4,10 @@ No broad NP or SOTA claim is made. Claims are limited to named artifacts and val
 
 ## Summary
 
-- Route coverage: 6/6
+- Route coverage: 6/7
 - Live exact matches: 0/2
 - Live heuristic wins: 0/2
-- Records: 16
+- Records: 17
 - Publishable claims: 2
 - External solver records: 0
 - Quantum test commands passed: 0/0
@@ -18,7 +18,7 @@ No broad NP or SOTA claim is made. Claims are limited to named artifacts and val
 
 | Claim | Status | Evidence |
 |---|---|---|
-| Catalyst-Q SDK exposes all six public NP helper routes: SAT, TSP, knapsack/MKP, portfolio, QUBO, and Max-Cut. | publishable | SDK prepared-request records with route validators. |
+| Catalyst-Q SDK exposes all seven public NP helper routes: SAT, TSP, knapsack/MKP, portfolio, QUBO, Max-Cut, and DAG Optimization. | publishable | SDK prepared-request records with route validators. |
 | Catalyst-Q live SDK/API matches the exact QUBO reference objective -4.0 on the bundled smoke instance. | blocked-until-live-api-run | Raw record validator.matches_reference for QUBO. |
 | Catalyst-Q live SDK/API matches the exact Max-Cut reference objective 9.0 on the bundled smoke instance. | blocked-until-live-api-run | Raw record validator.matches_reference for Max-Cut. |
 | Catalyst-Q live SDK/API beats the included greedy heuristic baselines on the bundled QUBO and Max-Cut smoke instances. | blocked-until-live-api-run | QUBO is lower-is-better and Max-Cut is higher-is-better against local heuristic baseline records. |
@@ -45,6 +45,7 @@ No broad NP or SOTA claim is made. Claims are limited to named artifacts and val
 | portfolio_smoke_8 | Portfolio | catalyst-q-sdk-request | unknown |  |
 | biqmac_qubo_6 | QUBO | catalyst-q-sdk-request | unknown |  |
 | biqmac_maxcut_6 | Max-Cut | catalyst-q-sdk-request | unknown |  |
+| cafa6_dag_optimization_12 | DAG Optimization | catalyst-q-sdk-request | unknown |  |
 
 ## High-Qubit Exactness Evidence
 
