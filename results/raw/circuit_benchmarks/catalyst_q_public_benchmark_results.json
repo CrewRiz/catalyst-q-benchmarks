@@ -12,7 +12,7 @@
       "family": "Bernstein-Vazirani",
       "id": "qedc_bernstein_vazirani_8",
       "payload_bytes": 1778,
-      "prepare_time_us": 427.583,
+      "prepare_time_us": 560.125,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -36,7 +36,7 @@
       "family": "GHZ",
       "id": "supermarq_ghz_16",
       "payload_bytes": 2060,
-      "prepare_time_us": 43.208,
+      "prepare_time_us": 47.083,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -60,7 +60,7 @@
       "family": "QAOA ring",
       "id": "supermarq_qaoa_ring_8",
       "payload_bytes": 2781,
-      "prepare_time_us": 41.791,
+      "prepare_time_us": 47.25,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -84,7 +84,7 @@
       "family": "QFT",
       "id": "qasmbench_qft_5_qasm",
       "payload_bytes": 1430,
-      "prepare_time_us": 166.042,
+      "prepare_time_us": 216.167,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -108,7 +108,7 @@
       "family": "Grover",
       "id": "mqtbench_grover_6",
       "payload_bytes": 2107,
-      "prepare_time_us": 36.875,
+      "prepare_time_us": 41.375,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -130,7 +130,7 @@
       "family": "Random 3-SAT",
       "id": "satlib_random_3sat_20",
       "payload_bytes": 1737,
-      "prepare_time_us": 65.084,
+      "prepare_time_us": 64.959,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -152,7 +152,7 @@
       "family": "Euclidean TSP",
       "id": "tsplib_euclidean_10",
       "payload_bytes": 1166,
-      "prepare_time_us": 50.541,
+      "prepare_time_us": 54.5,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -174,7 +174,7 @@
       "family": "0/1 knapsack",
       "id": "orlib_mknap_12",
       "payload_bytes": 883,
-      "prepare_time_us": 17.542,
+      "prepare_time_us": 21.75,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -196,7 +196,7 @@
       "family": "Cardinality-constrained portfolio",
       "id": "orlib_portfolio_8",
       "payload_bytes": 1432,
-      "prepare_time_us": 46.417,
+      "prepare_time_us": 56.291,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -218,7 +218,7 @@
       "family": "Binary quadratic optimization",
       "id": "biqmac_qubo_6",
       "payload_bytes": 985,
-      "prepare_time_us": 14.542,
+      "prepare_time_us": 17.833,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -240,7 +240,7 @@
       "family": "Max-Cut",
       "id": "biqmac_maxcut_6",
       "payload_bytes": 1049,
-      "prepare_time_us": 18.375,
+      "prepare_time_us": 22.625,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -262,7 +262,7 @@
       "family": "DAG Optimization",
       "id": "cafa6_dag_optimization_12",
       "payload_bytes": 1494,
-      "prepare_time_us": 35.583,
+      "prepare_time_us": 95.583,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -286,7 +286,7 @@
       "family": "Adder",
       "id": "cafa6_full_adder_4",
       "payload_bytes": 1197,
-      "prepare_time_us": 24.083,
+      "prepare_time_us": 42.792,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -310,7 +310,7 @@
       "family": "Loschmidt Echo",
       "id": "google_echo_8",
       "payload_bytes": 2651,
-      "prepare_time_us": 45.792,
+      "prepare_time_us": 60.625,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -332,7 +332,7 @@
       "family": "Random 3-SAT",
       "id": "sat_competition_100",
       "payload_bytes": 5732,
-      "prepare_time_us": 1336.208,
+      "prepare_time_us": 1603.25,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -354,7 +354,7 @@
       "family": "Integer Linear Programming",
       "id": "miplib_mknap_100",
       "payload_bytes": 2427,
-      "prepare_time_us": 502.708,
+      "prepare_time_us": 658.375,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -378,7 +378,7 @@
       "family": "Quantum Fourier Transform",
       "id": "qasmbench_qft_500",
       "payload_bytes": 8903542,
-      "prepare_time_us": 154885.5,
+      "prepare_time_us": 199884.584,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -402,7 +402,7 @@
       "family": "Hamiltonian Simulation",
       "id": "benchpress_tfim_100",
       "payload_bytes": 186960,
-      "prepare_time_us": 11832.083,
+      "prepare_time_us": 18208.792,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -411,6 +411,30 @@
       },
       "size_label": "100 qubits, 10 steps",
       "source_url": "https://github.com/Qiskit/benchpress",
+      "suite": "SupermarQ & IBM Benchpress",
+      "workload_type": "circuit"
+    },
+    {
+      "billing_estimate": {
+        "circuit_runs": 1,
+        "compute_units": 3020800000000,
+        "gate_count": 295000,
+        "qubits": 10000,
+        "shots": 1024
+      },
+      "description": "Massive QAOA on a 3-regular graph (p=5 layers) requiring 2^{10000} statevector amplitudes.",
+      "family": "QAOA",
+      "id": "supermarq_qaoa_10000",
+      "payload_bytes": 14038141,
+      "prepare_time_us": 209334.334,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/execute",
+        "url": "https://api.strategic-innovations.ai/v3turbo/execute"
+      },
+      "size_label": "10,000 qubits, 285,000 gates",
+      "source_url": "https://github.com/Infleqtion/client-superstaq/tree/main/supermarq-benchmarks",
       "suite": "SupermarQ & IBM Benchpress",
       "workload_type": "circuit"
     }
@@ -432,8 +456,8 @@
     "tsplib": "https://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/index.html"
   },
   "summary": {
-    "max_qubits": 500,
-    "quantum_cases": 9,
+    "max_qubits": 10000,
+    "quantum_cases": 10,
     "solver_cases": 9,
     "suite_count": 16,
     "suites": [
@@ -454,8 +478,8 @@
       "SupermarQ & IBM Benchpress",
       "TSPLIB"
     ],
-    "total_cases": 18,
-    "total_compute_units": 64932191390,
-    "total_payload_bytes": 9121411
+    "total_cases": 19,
+    "total_compute_units": 3085732191390,
+    "total_payload_bytes": 23159552
   }
 }
