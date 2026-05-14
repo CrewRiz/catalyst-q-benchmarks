@@ -12,7 +12,7 @@
       "family": "Bernstein-Vazirani",
       "id": "qedc_bernstein_vazirani_8",
       "payload_bytes": 1778,
-      "prepare_time_us": 560.125,
+      "prepare_time_us": 467.625,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -36,7 +36,7 @@
       "family": "GHZ",
       "id": "supermarq_ghz_16",
       "payload_bytes": 2060,
-      "prepare_time_us": 47.083,
+      "prepare_time_us": 30.291,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -60,7 +60,7 @@
       "family": "QAOA ring",
       "id": "supermarq_qaoa_ring_8",
       "payload_bytes": 2781,
-      "prepare_time_us": 47.25,
+      "prepare_time_us": 36.292,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -84,7 +84,7 @@
       "family": "QFT",
       "id": "qasmbench_qft_5_qasm",
       "payload_bytes": 1430,
-      "prepare_time_us": 216.167,
+      "prepare_time_us": 140.583,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -108,7 +108,7 @@
       "family": "Grover",
       "id": "mqtbench_grover_6",
       "payload_bytes": 2107,
-      "prepare_time_us": 41.375,
+      "prepare_time_us": 31.916,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -130,7 +130,7 @@
       "family": "Random 3-SAT",
       "id": "satlib_random_3sat_20",
       "payload_bytes": 1737,
-      "prepare_time_us": 64.959,
+      "prepare_time_us": 69.333,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -152,7 +152,7 @@
       "family": "Euclidean TSP",
       "id": "tsplib_euclidean_10",
       "payload_bytes": 1166,
-      "prepare_time_us": 54.5,
+      "prepare_time_us": 45.791,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -174,7 +174,7 @@
       "family": "0/1 knapsack",
       "id": "orlib_mknap_12",
       "payload_bytes": 883,
-      "prepare_time_us": 21.75,
+      "prepare_time_us": 14.75,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -196,7 +196,7 @@
       "family": "Cardinality-constrained portfolio",
       "id": "orlib_portfolio_8",
       "payload_bytes": 1432,
-      "prepare_time_us": 56.291,
+      "prepare_time_us": 40.708,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -218,7 +218,7 @@
       "family": "Binary quadratic optimization",
       "id": "biqmac_qubo_6",
       "payload_bytes": 985,
-      "prepare_time_us": 17.833,
+      "prepare_time_us": 12.5,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -240,7 +240,7 @@
       "family": "Max-Cut",
       "id": "biqmac_maxcut_6",
       "payload_bytes": 1049,
-      "prepare_time_us": 22.625,
+      "prepare_time_us": 15.25,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -262,7 +262,7 @@
       "family": "DAG Optimization",
       "id": "cafa6_dag_optimization_12",
       "payload_bytes": 1494,
-      "prepare_time_us": 95.583,
+      "prepare_time_us": 28.625,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -286,7 +286,7 @@
       "family": "Adder",
       "id": "cafa6_full_adder_4",
       "payload_bytes": 1197,
-      "prepare_time_us": 42.792,
+      "prepare_time_us": 22.25,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -310,7 +310,7 @@
       "family": "Loschmidt Echo",
       "id": "google_echo_8",
       "payload_bytes": 2651,
-      "prepare_time_us": 60.625,
+      "prepare_time_us": 38.292,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -332,7 +332,7 @@
       "family": "Random 3-SAT",
       "id": "sat_competition_100",
       "payload_bytes": 5732,
-      "prepare_time_us": 1603.25,
+      "prepare_time_us": 1140.0,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -354,7 +354,7 @@
       "family": "Integer Linear Programming",
       "id": "miplib_mknap_100",
       "payload_bytes": 2427,
-      "prepare_time_us": 658.375,
+      "prepare_time_us": 431.083,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -378,7 +378,7 @@
       "family": "Quantum Fourier Transform",
       "id": "qasmbench_qft_500",
       "payload_bytes": 8903542,
-      "prepare_time_us": 199884.584,
+      "prepare_time_us": 139427.042,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -402,7 +402,7 @@
       "family": "Hamiltonian Simulation",
       "id": "benchpress_tfim_100",
       "payload_bytes": 186960,
-      "prepare_time_us": 18208.792,
+      "prepare_time_us": 11138.208,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -426,7 +426,7 @@
       "family": "QAOA",
       "id": "supermarq_qaoa_10000",
       "payload_bytes": 14038141,
-      "prepare_time_us": 209334.334,
+      "prepare_time_us": 173390.958,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -436,6 +436,54 @@
       "size_label": "10,000 qubits, 285,000 gates",
       "source_url": "https://github.com/Infleqtion/client-superstaq/tree/main/supermarq-benchmarks",
       "suite": "SupermarQ & IBM Benchpress",
+      "workload_type": "circuit"
+    },
+    {
+      "billing_estimate": {
+        "circuit_runs": 1,
+        "compute_units": 5564768256,
+        "gate_count": 50318,
+        "qubits": 108,
+        "shots": 1024
+      },
+      "description": "Surrogate simulation of Nitrogenase FeMoco active space via 4-body Trotterized interactions.",
+      "family": "Hamiltonian Simulation",
+      "id": "qchem_femoco_108",
+      "payload_bytes": 2068774,
+      "prepare_time_us": 42200.25,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/execute",
+        "url": "https://api.strategic-innovations.ai/v3turbo/execute"
+      },
+      "size_label": "108 qubits, 50,000 gates",
+      "source_url": "https://github.com/quantumlib/OpenFermion",
+      "suite": "Quantum Chemistry (VQE)",
+      "workload_type": "circuit"
+    },
+    {
+      "billing_estimate": {
+        "circuit_runs": 1,
+        "compute_units": 445534672896,
+        "gate_count": 106146,
+        "qubits": 4099,
+        "shots": 1024
+      },
+      "description": "Massive Modular Multiplier block from a 2048-bit Shor's algorithm circuit.",
+      "family": "Modular Exponentiation",
+      "id": "shor_rsa_2048_surrogate",
+      "payload_bytes": 4262951,
+      "prepare_time_us": 86026.666,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/execute",
+        "url": "https://api.strategic-innovations.ai/v3turbo/execute"
+      },
+      "size_label": "4,099 qubits, 100,000 gates",
+      "source_url": "https://arxiv.org/abs/quant-ph/0205095",
+      "suite": "Cryptanalysis (Shor's)",
       "workload_type": "circuit"
     }
   ],
@@ -457,14 +505,15 @@
   },
   "summary": {
     "max_qubits": 10000,
-    "quantum_cases": 10,
+    "quantum_cases": 12,
     "solver_cases": 9,
-    "suite_count": 16,
+    "suite_count": 18,
     "suites": [
       "Biq Mac Library",
       "Catalyst Arithmetic",
       "Catalyst Biocomputation",
       "Catalyst Sampling",
+      "Cryptanalysis (Shor's)",
       "MIPLIB 2017",
       "MQT Bench",
       "OR-Library Knapsack",
@@ -472,14 +521,15 @@
       "QASMBench",
       "QASMBench Advantage",
       "QED-C Application-Oriented Benchmarks",
+      "Quantum Chemistry (VQE)",
       "SAT Competition",
       "SATLIB",
       "SupermarQ",
       "SupermarQ & IBM Benchpress",
       "TSPLIB"
     ],
-    "total_cases": 19,
-    "total_compute_units": 3085732191390,
-    "total_payload_bytes": 23159552
+    "total_cases": 21,
+    "total_compute_units": 3536831632542,
+    "total_payload_bytes": 29491277
   }
 }

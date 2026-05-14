@@ -6,11 +6,11 @@ It is not a formal complexity proof and does not disclose proprietary execution 
 ## Summary
 
 - API execution mode: request-preparation
-- Total cases: 19
-- Quantum cases: 10
+- Total cases: 21
+- Quantum cases: 12
 - Solver cases: 9
-- Public suites covered: 16
-- Total compute units: 3085732191390
+- Public suites covered: 18
+- Total compute units: 3536831632542
 
 ## Cases
 
@@ -35,6 +35,8 @@ It is not a formal complexity proof and does not disclose proprietary execution 
 | qasmbench_qft_500 | QASMBench Advantage | Quantum Fourier Transform | circuit | 500 qubits, 125,250 gates | 64512000000 | 8903542 |
 | benchpress_tfim_100 | SupermarQ & IBM Benchpress | Hamiltonian Simulation | circuit | 100 qubits, 10 steps | 416768000 | 186960 |
 | supermarq_qaoa_10000 | SupermarQ & IBM Benchpress | QAOA | circuit | 10,000 qubits, 285,000 gates | 3020800000000 | 14038141 |
+| qchem_femoco_108 | Quantum Chemistry (VQE) | Hamiltonian Simulation | circuit | 108 qubits, 50,000 gates | 5564768256 | 2068774 |
+| shor_rsa_2048_surrogate | Cryptanalysis (Shor's) | Modular Exponentiation | circuit | 4,099 qubits, 100,000 gates | 445534672896 | 4262951 |
 
 ## Sources
 
