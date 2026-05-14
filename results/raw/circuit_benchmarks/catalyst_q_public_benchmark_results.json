@@ -12,7 +12,7 @@
       "family": "Bernstein-Vazirani",
       "id": "qedc_bernstein_vazirani_8",
       "payload_bytes": 1778,
-      "prepare_time_us": 426.625,
+      "prepare_time_us": 454.834,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -36,7 +36,7 @@
       "family": "GHZ",
       "id": "supermarq_ghz_16",
       "payload_bytes": 2060,
-      "prepare_time_us": 39.334,
+      "prepare_time_us": 36.334,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -60,7 +60,7 @@
       "family": "QAOA ring",
       "id": "supermarq_qaoa_ring_8",
       "payload_bytes": 2781,
-      "prepare_time_us": 44.584,
+      "prepare_time_us": 42.916,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -84,7 +84,7 @@
       "family": "QFT",
       "id": "qasmbench_qft_5_qasm",
       "payload_bytes": 1430,
-      "prepare_time_us": 179.625,
+      "prepare_time_us": 494.75,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -108,7 +108,7 @@
       "family": "Grover",
       "id": "mqtbench_grover_6",
       "payload_bytes": 2107,
-      "prepare_time_us": 41.0,
+      "prepare_time_us": 52.75,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -130,7 +130,7 @@
       "family": "Random 3-SAT",
       "id": "satlib_random_3sat_20",
       "payload_bytes": 1737,
-      "prepare_time_us": 79.75,
+      "prepare_time_us": 76.916,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -152,7 +152,7 @@
       "family": "Euclidean TSP",
       "id": "tsplib_euclidean_10",
       "payload_bytes": 1166,
-      "prepare_time_us": 50.125,
+      "prepare_time_us": 53.292,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -174,7 +174,7 @@
       "family": "0/1 knapsack",
       "id": "orlib_mknap_12",
       "payload_bytes": 883,
-      "prepare_time_us": 16.25,
+      "prepare_time_us": 18.667,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -196,7 +196,7 @@
       "family": "Cardinality-constrained portfolio",
       "id": "orlib_portfolio_8",
       "payload_bytes": 1432,
-      "prepare_time_us": 52.333,
+      "prepare_time_us": 52.083,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -218,7 +218,7 @@
       "family": "Binary quadratic optimization",
       "id": "biqmac_qubo_6",
       "payload_bytes": 985,
-      "prepare_time_us": 16.416,
+      "prepare_time_us": 31.166,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -240,7 +240,7 @@
       "family": "Max-Cut",
       "id": "biqmac_maxcut_6",
       "payload_bytes": 1049,
-      "prepare_time_us": 20.833,
+      "prepare_time_us": 27.208,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -262,7 +262,7 @@
       "family": "DAG Optimization",
       "id": "cafa6_dag_optimization_12",
       "payload_bytes": 1494,
-      "prepare_time_us": 36.792,
+      "prepare_time_us": 43.375,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -286,7 +286,7 @@
       "family": "Adder",
       "id": "cafa6_full_adder_4",
       "payload_bytes": 1197,
-      "prepare_time_us": 25.959,
+      "prepare_time_us": 40.625,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -310,7 +310,7 @@
       "family": "Loschmidt Echo",
       "id": "google_echo_8",
       "payload_bytes": 2651,
-      "prepare_time_us": 50.958,
+      "prepare_time_us": 54.041,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -320,6 +320,74 @@
       "size_label": "8 qubits",
       "source_url": "https://catalyst-q.strategic-innovations.ai",
       "suite": "Catalyst Sampling",
+      "workload_type": "circuit"
+    },
+    {
+      "billing_estimate": {
+        "compute_units": 40000,
+        "problem_size": 100,
+        "solver_runs": 1
+      },
+      "description": "Dense random 3-SAT instance near the phase transition ratio.",
+      "family": "Random 3-SAT",
+      "id": "sat_competition_100",
+      "payload_bytes": 5732,
+      "prepare_time_us": 1440.959,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/solve/sat",
+        "url": "https://api.strategic-innovations.ai/v3turbo/solve/sat"
+      },
+      "size_label": "100 variables, 400 clauses",
+      "source_url": "https://satcompetition.github.io/2023/",
+      "suite": "SAT Competition",
+      "workload_type": "solver"
+    },
+    {
+      "billing_estimate": {
+        "compute_units": 1303000,
+        "problem_size": 100,
+        "solver_runs": 1
+      },
+      "description": "Multidimensional knapsack representing dense structural constraints of ILP problems.",
+      "family": "Integer Linear Programming",
+      "id": "miplib_mknap_100",
+      "payload_bytes": 2427,
+      "prepare_time_us": 483.416,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/solve/knapsack",
+        "url": "https://api.strategic-innovations.ai/v3turbo/solve/knapsack"
+      },
+      "size_label": "100 items, 5 constraints",
+      "source_url": "https://miplib.zib.de/",
+      "suite": "MIPLIB 2017",
+      "workload_type": "solver"
+    },
+    {
+      "billing_estimate": {
+        "circuit_runs": 1,
+        "compute_units": 64512000000,
+        "gate_count": 126000,
+        "qubits": 500,
+        "shots": 1024
+      },
+      "description": "Extreme-scale block-encoding demonstration bypassing statevector memory limits.",
+      "family": "Quantum Fourier Transform",
+      "id": "qasmbench_qft_500",
+      "payload_bytes": 8903542,
+      "prepare_time_us": 173195.333,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/execute",
+        "url": "https://api.strategic-innovations.ai/v3turbo/execute"
+      },
+      "size_label": "500 qubits, 125,250 gates",
+      "source_url": "https://github.com/pnnl/QASMBench",
+      "suite": "QASMBench Advantage",
       "workload_type": "circuit"
     }
   ],
@@ -340,26 +408,29 @@
     "tsplib": "https://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/index.html"
   },
   "summary": {
-    "max_qubits": 16,
-    "quantum_cases": 7,
-    "solver_cases": 7,
-    "suite_count": 12,
+    "max_qubits": 500,
+    "quantum_cases": 8,
+    "solver_cases": 9,
+    "suite_count": 15,
     "suites": [
       "Biq Mac Library",
       "Catalyst Arithmetic",
       "Catalyst Biocomputation",
       "Catalyst Sampling",
+      "MIPLIB 2017",
       "MQT Bench",
       "OR-Library Knapsack",
       "OR-Library Portfolio",
       "QASMBench",
+      "QASMBench Advantage",
       "QED-C Application-Oriented Benchmarks",
+      "SAT Competition",
       "SATLIB",
       "SupermarQ",
       "TSPLIB"
     ],
-    "total_cases": 14,
-    "total_compute_units": 2080390,
-    "total_payload_bytes": 22750
+    "total_cases": 17,
+    "total_compute_units": 64515423390,
+    "total_payload_bytes": 8934451
   }
 }
