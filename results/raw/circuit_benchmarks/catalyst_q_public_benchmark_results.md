@@ -6,11 +6,11 @@ It is not a formal complexity proof and does not disclose proprietary execution 
 ## Summary
 
 - API execution mode: request-preparation
-- Total cases: 17
-- Quantum cases: 8
+- Total cases: 18
+- Quantum cases: 9
 - Solver cases: 9
-- Public suites covered: 15
-- Total compute units: 64515423390
+- Public suites covered: 16
+- Total compute units: 64932191390
 
 ## Cases
 
@@ -33,6 +33,7 @@ It is not a formal complexity proof and does not disclose proprietary execution 
 | sat_competition_100 | SAT Competition | Random 3-SAT | solver | 100 variables, 400 clauses | 40000 | 5732 |
 | miplib_mknap_100 | MIPLIB 2017 | Integer Linear Programming | solver | 100 items, 5 constraints | 1303000 | 2427 |
 | qasmbench_qft_500 | QASMBench Advantage | Quantum Fourier Transform | circuit | 500 qubits, 125,250 gates | 64512000000 | 8903542 |
+| benchpress_tfim_100 | SupermarQ & IBM Benchpress | Hamiltonian Simulation | circuit | 100 qubits, 10 steps | 416768000 | 186960 |
 
 ## Sources
 
