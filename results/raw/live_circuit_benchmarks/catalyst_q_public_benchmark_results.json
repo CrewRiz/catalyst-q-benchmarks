@@ -1,0 +1,1050 @@
+{
+  "benchmarks": [
+    {
+      "api_execution": {
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "CF-RAY": "9fb8d24b4f43c300-IAH",
+          "Cf-Placement": "local-IAH",
+          "Connection": "close",
+          "Content-Length": "183",
+          "Content-Type": "application/json",
+          "Date": "Thu, 14 May 2026 09:19:28 GMT",
+          "Server": "cloudflare",
+          "Server-Timing": "cfEdge;dur=6,cfOrigin;dur=0,cfWorker;dur=19",
+          "Vary": "accept-encoding",
+          "X-Catalyst-Version": "3.0.0-turbo",
+          "X-Request-ID": "req_1778750368527_xzu2sw",
+          "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "json": {
+          "depth": 23,
+          "job_id": "v3t_1778750368527",
+          "qubits": 9,
+          "result": {
+            "measurement": {
+              "000000000": 501,
+              "000000001": 523
+            },
+            "top_states": [
+              [
+                "000000001",
+                523
+              ],
+              [
+                "000000000",
+                501
+              ]
+            ]
+          },
+          "status": "completed"
+        },
+        "latency_ms": 106.236,
+        "ok": true,
+        "response_bytes": 183,
+        "response_sha256": "154629305f82a3705e65235967257f8ab38e7fa9d036df90036582b304077fbc",
+        "status_code": 200
+      },
+      "billing_estimate": {
+        "circuit_runs": 1,
+        "compute_units": 285696,
+        "gate_count": 31,
+        "qubits": 9,
+        "shots": 1024
+      },
+      "description": "Application-oriented oracle circuit representative used for SDK request validation.",
+      "family": "Bernstein-Vazirani",
+      "id": "qedc_bernstein_vazirani_8",
+      "payload_bytes": 1778,
+      "prepare_time_us": 218.916,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/execute",
+        "url": "https://api.strategic-innovations.ai/v3turbo/execute"
+      },
+      "size_label": "8-bit hidden string",
+      "source_url": "https://quantumconsortium.org/publication/application-oriented-performance-benchmarks-for-quantum-computing/",
+      "suite": "QED-C Application-Oriented Benchmarks",
+      "workload_type": "circuit"
+    },
+    {
+      "api_execution": {
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "CF-RAY": "9fb8d24bcdc0586b-IAH",
+          "Cf-Placement": "local-IAH",
+          "Connection": "close",
+          "Content-Length": "212",
+          "Content-Type": "application/json",
+          "Date": "Thu, 14 May 2026 09:19:28 GMT",
+          "Server": "cloudflare",
+          "Server-Timing": "cfEdge;dur=10,cfOrigin;dur=0,cfWorker;dur=8",
+          "Vary": "accept-encoding",
+          "X-Catalyst-Version": "3.0.0-turbo",
+          "X-Request-ID": "req_1778750368612_bs84b2",
+          "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "json": {
+          "depth": 16,
+          "job_id": "v3t_1778750368612",
+          "qubits": 16,
+          "result": {
+            "measurement": {
+              "0000000000000000": 540,
+              "1100000000000000": 484
+            },
+            "top_states": [
+              [
+                "0000000000000000",
+                540
+              ],
+              [
+                "1100000000000000",
+                484
+              ]
+            ]
+          },
+          "status": "completed"
+        },
+        "latency_ms": 75.033,
+        "ok": true,
+        "response_bytes": 212,
+        "response_sha256": "1c7d39ab5b4d8384c0103de3da3ae2eb03a9efc5f3d3f648c7e58912ebb82ab8",
+        "status_code": 200
+      },
+      "billing_estimate": {
+        "circuit_runs": 1,
+        "compute_units": 524288,
+        "gate_count": 32,
+        "qubits": 16,
+        "shots": 1024
+      },
+      "description": "Scalable entanglement workload aligned with SupermarQ-style application benchmarks.",
+      "family": "GHZ",
+      "id": "supermarq_ghz_16",
+      "payload_bytes": 2060,
+      "prepare_time_us": 53.208,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/execute",
+        "url": "https://api.strategic-innovations.ai/v3turbo/execute"
+      },
+      "size_label": "16 qubits",
+      "source_url": "https://www.scholars.northwestern.edu/en/publications/supermarq-a-scalable-quantum-benchmark-suite",
+      "suite": "SupermarQ",
+      "workload_type": "circuit"
+    },
+    {
+      "api_execution": {
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "CF-RAY": "9fb8d24c3902e579-IAH",
+          "Cf-Placement": "local-IAH",
+          "Connection": "close",
+          "Content-Length": "149",
+          "Content-Type": "application/json",
+          "Date": "Thu, 14 May 2026 09:19:28 GMT",
+          "Server": "cloudflare",
+          "Server-Timing": "cfEdge;dur=10,cfOrigin;dur=0,cfWorker;dur=3",
+          "Vary": "accept-encoding",
+          "X-Catalyst-Version": "3.0.0-turbo",
+          "X-Request-ID": "req_1778750368687_4a03rs",
+          "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "json": {
+          "depth": 40,
+          "job_id": "v3t_1778750368687",
+          "qubits": 8,
+          "result": {
+            "measurement": {
+              "00000000": 1024
+            },
+            "top_states": [
+              [
+                "00000000",
+                1024
+              ]
+            ]
+          },
+          "status": "completed"
+        },
+        "latency_ms": 68.652,
+        "ok": true,
+        "response_bytes": 149,
+        "response_sha256": "0b84765ad149fc3787661567989a5b6df9d0af305104e55fb8d1d23ef8607c5b",
+        "status_code": 200
+      },
+      "billing_estimate": {
+        "circuit_runs": 1,
+        "compute_units": 393216,
+        "gate_count": 48,
+        "qubits": 8,
+        "shots": 1024
+      },
+      "description": "Parameterized optimization circuit with alternating cost and mixer layers.",
+      "family": "QAOA ring",
+      "id": "supermarq_qaoa_ring_8",
+      "payload_bytes": 2781,
+      "prepare_time_us": 58.667,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/execute",
+        "url": "https://api.strategic-innovations.ai/v3turbo/execute"
+      },
+      "size_label": "8 qubits, one layer",
+      "source_url": "https://www.scholars.northwestern.edu/en/publications/supermarq-a-scalable-quantum-benchmark-suite",
+      "suite": "SupermarQ",
+      "workload_type": "circuit"
+    },
+    {
+      "api_execution": {
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "CF-RAY": "9fb8d24cac5b15ab-IAH",
+          "Cf-Placement": "local-IAH",
+          "Connection": "close",
+          "Content-Length": "537",
+          "Content-Type": "application/json",
+          "Date": "Thu, 14 May 2026 09:19:28 GMT",
+          "Server": "cloudflare",
+          "Server-Timing": "cfEdge;dur=10,cfOrigin;dur=0,cfWorker;dur=7",
+          "Vary": "accept-encoding",
+          "X-Catalyst-Version": "3.0.0-turbo",
+          "X-Request-ID": "req_1778750368754_te5f0j",
+          "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "json": {
+          "job_id": "v3t_1778750368754",
+          "qubits": 5,
+          "result": {
+            "measurement": {
+              "00000": 42,
+              "00001": 28,
+              "00010": 39,
+              "00011": 39,
+              "00100": 29,
+              "00101": 37,
+              "00110": 29,
+              "00111": 30,
+              "01000": 39,
+              "01001": 34,
+              "01010": 33,
+              "01011": 28,
+              "01100": 36,
+              "01101": 34,
+              "01110": 32,
+              "01111": 33,
+              "10000": 31,
+              "10001": 40,
+              "10010": 31,
+              "10011": 31,
+              "10100": 26,
+              "10101": 32,
+              "10110": 29,
+              "10111": 29,
+              "11000": 35,
+              "11001": 31,
+              "11010": 30,
+              "11011": 26,
+              "11100": 20,
+              "11101": 27,
+              "11110": 32,
+              "11111": 32
+            },
+            "top_states": [
+              [
+                "00000",
+                42
+              ],
+              [
+                "10001",
+                40
+              ],
+              [
+                "00011",
+                39
+              ],
+              [
+                "00010",
+                39
+              ],
+              [
+                "01000",
+                39
+              ]
+            ]
+          },
+          "status": "completed",
+          "version": "2.0"
+        },
+        "latency_ms": 70.556,
+        "ok": true,
+        "response_bytes": 537,
+        "response_sha256": "f6078b4094f48a09e5d5c45f817a4477b63216114e6a7b1702c3b7786c0f8076",
+        "status_code": 200
+      },
+      "billing_estimate": {
+        "circuit_runs": 1,
+        "compute_units": 112640,
+        "gate_count": 22,
+        "qubits": 5,
+        "shots": 1024
+      },
+      "description": "OpenQASM request-preparation path modeled on QASMBench-style circuit artifacts.",
+      "family": "QFT",
+      "id": "qasmbench_qft_5_qasm",
+      "payload_bytes": 1430,
+      "prepare_time_us": 235.833,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/execute/qasm",
+        "url": "https://api.strategic-innovations.ai/v3turbo/execute/qasm"
+      },
+      "size_label": "5 qubits",
+      "source_url": "https://github.com/pnnl/QASMBench",
+      "suite": "QASMBench",
+      "workload_type": "qasm"
+    },
+    {
+      "api_execution": {
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "CF-RAY": "9fb8d24d193cc300-IAH",
+          "Cf-Placement": "local-IAH",
+          "Connection": "close",
+          "Content-Length": "948",
+          "Content-Type": "application/json",
+          "Date": "Thu, 14 May 2026 09:19:28 GMT",
+          "Server": "cloudflare",
+          "Server-Timing": "cfEdge;dur=6,cfOrigin;dur=0,cfWorker;dur=3",
+          "Vary": "accept-encoding",
+          "X-Catalyst-Version": "3.0.0-turbo",
+          "X-Request-ID": "req_1778750368814_89w4fo",
+          "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "json": {
+          "depth": 40,
+          "job_id": "v3t_1778750368814",
+          "qubits": 6,
+          "result": {
+            "measurement": {
+              "000000": 19,
+              "000001": 16,
+              "000010": 21,
+              "000011": 18,
+              "000100": 20,
+              "000101": 18,
+              "000110": 13,
+              "000111": 21,
+              "001000": 22,
+              "001001": 14,
+              "001010": 19,
+              "001011": 18,
+              "001100": 19,
+              "001101": 14,
+              "001110": 11,
+              "001111": 12,
+              "010000": 13,
+              "010001": 13,
+              "010010": 17,
+              "010011": 15,
+              "010100": 12,
+              "010101": 25,
+              "010110": 13,
+              "010111": 21,
+              "011000": 9,
+              "011001": 14,
+              "011010": 19,
+              "011011": 18,
+              "011100": 18,
+              "011101": 15,
+              "011110": 12,
+              "011111": 22,
+              "100000": 15,
+              "100001": 14,
+              "100010": 20,
+              "100011": 21,
+              "100100": 18,
+              "100101": 11,
+              "100110": 12,
+              "100111": 16,
+              "101000": 14,
+              "101001": 17,
+              "101010": 14,
+              "101011": 15,
+              "101100": 9,
+              "101101": 7,
+              "101110": 12,
+              "101111": 14,
+              "110000": 28,
+              "110001": 17,
+              "110010": 17,
+              "110011": 12,
+              "110100": 14,
+              "110101": 12,
+              "110110": 19,
+              "110111": 15,
+              "111000": 16,
+              "111001": 22,
+              "111010": 28,
+              "111011": 16,
+              "111100": 7,
+              "111101": 15,
+              "111110": 9,
+              "111111": 17
+            },
+            "top_states": [
+              [
+                "110000",
+                28
+              ],
+              [
+                "111010",
+                28
+              ],
+              [
+                "010101",
+                25
+              ],
+              [
+                "111001",
+                22
+              ],
+              [
+                "011111",
+                22
+              ]
+            ]
+          },
+          "status": "completed"
+        },
+        "latency_ms": 57.482,
+        "ok": true,
+        "response_bytes": 948,
+        "response_sha256": "1bb07f2aca9289a8be2ce43ce8561198e45a80c96a5e00286f56d2fb1e86f88d",
+        "status_code": 200
+      },
+      "billing_estimate": {
+        "circuit_runs": 1,
+        "compute_units": 282624,
+        "gate_count": 46,
+        "qubits": 6,
+        "shots": 1024
+      },
+      "description": "Algorithm-level Grover-style circuit for broad SDK gate coverage.",
+      "family": "Grover",
+      "id": "mqtbench_grover_6",
+      "payload_bytes": 2107,
+      "prepare_time_us": 68.208,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/execute",
+        "url": "https://api.strategic-innovations.ai/v3turbo/execute"
+      },
+      "size_label": "6 qubits",
+      "source_url": "https://github.com/munich-quantum-toolkit/bench",
+      "suite": "MQT Bench",
+      "workload_type": "circuit"
+    },
+    {
+      "api_execution": {
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "CF-RAY": "9fb8d24d8c218bf0-IAH",
+          "Cf-Placement": "local-IAH",
+          "Connection": "close",
+          "Content-Length": "186",
+          "Content-Type": "application/json",
+          "Date": "Thu, 14 May 2026 09:19:29 GMT",
+          "Server": "cloudflare",
+          "Server-Timing": "cfEdge;dur=11,cfOrigin;dur=0,cfWorker;dur=1026",
+          "Vary": "accept-encoding",
+          "X-Catalyst-Version": "3.0.0-turbo",
+          "X-Request-ID": "req_1778750368889_vitnch",
+          "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "json": {
+          "algorithm": "HBE-SAT-v4-Exact20-TS",
+          "assignment": {},
+          "clauses": 86,
+          "job_id": "sat_1778750368889",
+          "problem": "MAX-SAT",
+          "rounds": 1,
+          "satisfiable": true,
+          "timeMs": 0,
+          "variables": 20,
+          "violations": 0
+        },
+        "latency_ms": 1098.747,
+        "ok": true,
+        "response_bytes": 186,
+        "response_sha256": "3812a82520b1537cf06be81c9506934273faf83d852def4bda7161e673ba9ccd",
+        "status_code": 200
+      },
+      "billing_estimate": {
+        "compute_units": 1720,
+        "problem_size": 20,
+        "solver_runs": 1
+      },
+      "description": "DIMACS-style random 3-SAT instance shape for SAT solver payload validation.",
+      "family": "Random 3-SAT",
+      "id": "satlib_random_3sat_20",
+      "payload_bytes": 1737,
+      "prepare_time_us": 82.292,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/solve/sat",
+        "url": "https://api.strategic-innovations.ai/v3turbo/solve/sat"
+      },
+      "size_label": "20 variables, 86 clauses",
+      "source_url": "https://www.cs.ubc.ca/~hoos/SATLIB/",
+      "suite": "SATLIB",
+      "workload_type": "solver"
+    },
+    {
+      "api_execution": {
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "CF-RAY": "9fb8d2545ac4c30b-IAH",
+          "Cf-Placement": "local-IAH",
+          "Connection": "close",
+          "Content-Length": "140",
+          "Content-Type": "application/json",
+          "Date": "Thu, 14 May 2026 09:19:29 GMT",
+          "Server": "cloudflare",
+          "Server-Timing": "cfEdge;dur=10,cfOrigin;dur=0,cfWorker;dur=0",
+          "Vary": "accept-encoding",
+          "X-Catalyst-Version": "3.0.0-turbo",
+          "X-Request-ID": "req_1778750369983_h9rl3l",
+          "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "json": {
+          "algorithm": "HDC-TSP-2Opt",
+          "cities": 10,
+          "distance": 226,
+          "job_id": "tsp_1778750369983",
+          "problem": "TSP",
+          "timeMs": 0,
+          "tour": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            9,
+            7,
+            5,
+            3,
+            1
+          ]
+        },
+        "latency_ms": 66.271,
+        "ok": true,
+        "response_bytes": 140,
+        "response_sha256": "a2309086afd48d95a1459225ba46ff0cba7721903913259a6113398d9ce5a022",
+        "status_code": 200
+      },
+      "billing_estimate": {
+        "compute_units": 100,
+        "problem_size": 10,
+        "solver_runs": 1
+      },
+      "description": "Complete integer-distance TSP instance shaped after TSPLIB-style Euclidean problems.",
+      "family": "Euclidean TSP",
+      "id": "tsplib_euclidean_10",
+      "payload_bytes": 1166,
+      "prepare_time_us": 154.917,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/solve/tsp",
+        "url": "https://api.strategic-innovations.ai/v3turbo/solve/tsp"
+      },
+      "size_label": "10 cities",
+      "source_url": "https://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/index.html",
+      "suite": "TSPLIB",
+      "workload_type": "solver"
+    },
+    {
+      "api_execution": {
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "CF-RAY": "9fb8d254b84b1284-IAH",
+          "Cf-Placement": "local-IAH",
+          "Connection": "close",
+          "Content-Length": "184",
+          "Content-Type": "application/json",
+          "Date": "Thu, 14 May 2026 09:19:30 GMT",
+          "Server": "cloudflare",
+          "Server-Timing": "cfEdge;dur=10,cfOrigin;dur=0,cfWorker;dur=0",
+          "Vary": "accept-encoding",
+          "X-Catalyst-Version": "3.0.0-turbo",
+          "X-Request-ID": "req_1778750370044_41s0lb",
+          "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "json": {
+          "algorithm": "HDC-Knapsack-DP",
+          "capacity": 48,
+          "job_id": "knp_1778750370044",
+          "problem": "Knapsack",
+          "provenOptimal": true,
+          "selected": [
+            10,
+            7,
+            6,
+            2,
+            1
+          ],
+          "timeMs": 0,
+          "totalValue": 98,
+          "totalWeight": 48
+        },
+        "latency_ms": 60.042,
+        "ok": true,
+        "response_bytes": 184,
+        "response_sha256": "598f9f3044083a67d1d34898503b55579d278bb8e291c64b6011096a549760bc",
+        "status_code": 200
+      },
+      "billing_estimate": {
+        "compute_units": 576,
+        "problem_size": 12,
+        "solver_runs": 1
+      },
+      "description": "Single-constraint knapsack payload derived from OR-Library-style item/capacity data.",
+      "family": "0/1 knapsack",
+      "id": "orlib_mknap_12",
+      "payload_bytes": 883,
+      "prepare_time_us": 46.417,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/solve/knapsack",
+        "url": "https://api.strategic-innovations.ai/v3turbo/solve/knapsack"
+      },
+      "size_label": "12 items",
+      "source_url": "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/mknapinfo.html",
+      "suite": "OR-Library Knapsack",
+      "workload_type": "solver"
+    },
+    {
+      "api_execution": {
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "CF-RAY": "9fb8d2552efd5152-IAH",
+          "Cf-Placement": "local-IAH",
+          "Connection": "close",
+          "Content-Length": "377",
+          "Content-Type": "application/json",
+          "Date": "Thu, 14 May 2026 09:19:30 GMT",
+          "Server": "cloudflare",
+          "Server-Timing": "cfEdge;dur=10,cfOrigin;dur=0,cfWorker;dur=0",
+          "Vary": "accept-encoding",
+          "X-Catalyst-Version": "3.0.0-turbo",
+          "X-Request-ID": "req_1778750370111_ggvdum",
+          "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "json": {
+          "algorithm": "HDC-Portfolio-MVO",
+          "expectedReturn": 0.04325257540091748,
+          "job_id": "pfo_1778750370111",
+          "problem": "Portfolio Optimization",
+          "risk": 0.008061288668693113,
+          "sharpeRatio": 5.365459980895303,
+          "timeMs": 0,
+          "weights": [
+            0.06481661393043847,
+            0.15552780452803844,
+            0.11366110117529998,
+            0.21135007566502306,
+            0.03690547836194616,
+            0.19041672398865384,
+            0.09272774949893078,
+            0.13459445285166924
+          ]
+        },
+        "latency_ms": 65.875,
+        "ok": true,
+        "response_bytes": 377,
+        "response_sha256": "d438ff0f5e01c84b2b46b3e6ca2eb59984101ddfc9f553b3a5f2100b66c23efc",
+        "status_code": 200
+      },
+      "billing_estimate": {
+        "compute_units": 64,
+        "problem_size": 8,
+        "solver_runs": 1
+      },
+      "description": "Mean/covariance portfolio payload shaped after OR-Library portfolio benchmark fields.",
+      "family": "Cardinality-constrained portfolio",
+      "id": "orlib_portfolio_8",
+      "payload_bytes": 1432,
+      "prepare_time_us": 82.875,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/solve/portfolio",
+        "url": "https://api.strategic-innovations.ai/v3turbo/solve/portfolio"
+      },
+      "size_label": "8 assets",
+      "source_url": "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/portinfo.html",
+      "suite": "OR-Library Portfolio",
+      "workload_type": "solver"
+    },
+    {
+      "api_execution": {
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "CF-RAY": "9fb8d2558d2afefa-IAH",
+          "Cf-Placement": "local-IAH",
+          "Connection": "close",
+          "Content-Length": "154",
+          "Content-Type": "application/json",
+          "Date": "Thu, 14 May 2026 09:19:30 GMT",
+          "Server": "cloudflare",
+          "Server-Timing": "cfEdge;dur=50,cfOrigin;dur=0,cfWorker;dur=0",
+          "Vary": "accept-encoding",
+          "X-Catalyst-Version": "3.0.0-turbo",
+          "X-Request-ID": "req_1778750370213_wej49g",
+          "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "json": {
+          "algorithm": "rainprotocol_qubo_exact_worker_demo",
+          "assignment": [
+            1,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "job_id": "qubo_1778750370213",
+          "objective": -4,
+          "problem": "QUBO",
+          "variables": 6
+        },
+        "latency_ms": 101.961,
+        "ok": true,
+        "response_bytes": 154,
+        "response_sha256": "f33a645ef1c59fc4cd5c75466bf438bfea07dc4c643a6c645281fccaa4381f55",
+        "status_code": 200
+      },
+      "billing_estimate": {
+        "compute_units": 36,
+        "problem_size": 6,
+        "solver_runs": 1
+      },
+      "description": "Small dense QUBO payload for public SDK route and validator coverage.",
+      "family": "Binary quadratic optimization",
+      "id": "biqmac_qubo_6",
+      "payload_bytes": 985,
+      "prepare_time_us": 51.375,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/solve/qubo",
+        "url": "https://api.strategic-innovations.ai/v3turbo/solve/qubo"
+      },
+      "size_label": "6 binary variables",
+      "source_url": "https://biqmac.aau.at/biqmaclib.html",
+      "suite": "Biq Mac Library",
+      "workload_type": "solver"
+    },
+    {
+      "api_execution": {
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "CF-RAY": "9fb8d25638a320b0-IAH",
+          "Cf-Placement": "local-IAH",
+          "Connection": "close",
+          "Content-Length": "155",
+          "Content-Type": "application/json",
+          "Date": "Thu, 14 May 2026 09:19:30 GMT",
+          "Server": "cloudflare",
+          "Server-Timing": "cfEdge;dur=10,cfOrigin;dur=0,cfWorker;dur=0",
+          "Vary": "accept-encoding",
+          "X-Catalyst-Version": "3.0.0-turbo",
+          "X-Request-ID": "req_1778750370283_6ilyvv",
+          "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "json": {
+          "algorithm": "rainprotocol_maxcut_exact_worker_demo",
+          "cut_value": 9,
+          "job_id": "maxcut_1778750370283",
+          "nodes": 6,
+          "partition": [
+            1,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "problem": "Max-Cut"
+        },
+        "latency_ms": 68.87,
+        "ok": true,
+        "response_bytes": 155,
+        "response_sha256": "d3685b0e55ceedfa27dd262670e047491e5694db1b7a416181c1c82f376c7f93",
+        "status_code": 200
+      },
+      "billing_estimate": {
+        "compute_units": 54,
+        "problem_size": 6,
+        "solver_runs": 1
+      },
+      "description": "Weighted Max-Cut payload for public SDK route and validator coverage.",
+      "family": "Max-Cut",
+      "id": "biqmac_maxcut_6",
+      "payload_bytes": 1049,
+      "prepare_time_us": 62.667,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/solve/maxcut",
+        "url": "https://api.strategic-innovations.ai/v3turbo/solve/maxcut"
+      },
+      "size_label": "6 nodes, 9 weighted edges",
+      "source_url": "https://biqmac.aau.at/biqmaclib.html",
+      "suite": "Biq Mac Library",
+      "workload_type": "solver"
+    },
+    {
+      "api_execution": {
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "CF-RAY": "9fb8d256afe1c307-IAH",
+          "Cf-Placement": "local-IAH",
+          "Connection": "close",
+          "Content-Length": "170",
+          "Content-Type": "application/json",
+          "Date": "Thu, 14 May 2026 09:19:30 GMT",
+          "Server": "cloudflare",
+          "Server-Timing": "cfEdge;dur=9,cfOrigin;dur=0,cfWorker;dur=5",
+          "Vary": "accept-encoding",
+          "X-Catalyst-Version": "3.0.0-turbo",
+          "X-Request-ID": "req_1778750370348_dft403",
+          "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "json": {
+          "algorithm": "rainprotocol_qubo_exact_worker_demo",
+          "assignment": [
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "job_id": "qubo_1778750370348",
+          "objective": -1768,
+          "problem": "QUBO",
+          "variables": 12
+        },
+        "latency_ms": 69.175,
+        "ok": true,
+        "response_bytes": 170,
+        "response_sha256": "313c520e096c684a97a3d336569814f9428fd9381702d582703d99caa50c88e8",
+        "status_code": 200
+      },
+      "billing_estimate": {
+        "compute_units": 144,
+        "problem_size": 12,
+        "solver_runs": 1
+      },
+      "description": "Hierarchical DAG closure mapped to QUBO for massive classification taxonomies.",
+      "family": "DAG Optimization",
+      "id": "cafa6_dag_optimization_12",
+      "payload_bytes": 1494,
+      "prepare_time_us": 62.417,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/solve/qubo",
+        "url": "https://api.strategic-innovations.ai/v3turbo/solve/qubo"
+      },
+      "size_label": "12 nodes, 11 dependencies",
+      "source_url": "https://catalyst-q.strategic-innovations.ai",
+      "suite": "Catalyst Biocomputation",
+      "workload_type": "solver"
+    },
+    {
+      "api_execution": {
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "CF-RAY": "9fb8d257094020b0-IAH",
+          "Cf-Placement": "local-IAH",
+          "Connection": "close",
+          "Content-Length": "138",
+          "Content-Type": "application/json",
+          "Date": "Thu, 14 May 2026 09:19:30 GMT",
+          "Server": "cloudflare",
+          "Server-Timing": "cfEdge;dur=5,cfOrigin;dur=0,cfWorker;dur=1",
+          "Vary": "accept-encoding",
+          "X-Catalyst-Version": "3.0.0-turbo",
+          "X-Request-ID": "req_1778750370411_guql8d",
+          "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "json": {
+          "depth": 5,
+          "job_id": "v3t_1778750370411",
+          "qubits": 4,
+          "result": {
+            "measurement": {
+              "000": 1024
+            },
+            "top_states": [
+              [
+                "000",
+                1024
+              ]
+            ]
+          },
+          "status": "completed"
+        },
+        "latency_ms": 58.287,
+        "ok": true,
+        "response_bytes": 138,
+        "response_sha256": "328bd2aa0bd44335ee18e33ac967f39e5f7443d5281642ac18687471028ddd07",
+        "status_code": 200
+      },
+      "billing_estimate": {
+        "circuit_runs": 1,
+        "compute_units": 36864,
+        "gate_count": 9,
+        "qubits": 4,
+        "shots": 1024
+      },
+      "description": "1-bit full adder testing Toffoli and CNOT synthesis.",
+      "family": "Adder",
+      "id": "cafa6_full_adder_4",
+      "payload_bytes": 1197,
+      "prepare_time_us": 56.292,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/execute",
+        "url": "https://api.strategic-innovations.ai/v3turbo/execute"
+      },
+      "size_label": "4 qubits",
+      "source_url": "https://catalyst-q.strategic-innovations.ai",
+      "suite": "Catalyst Arithmetic",
+      "workload_type": "circuit"
+    },
+    {
+      "api_execution": {
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "CF-RAY": "9fb8d2576b563e84-IAH",
+          "Cf-Placement": "local-IAH",
+          "Connection": "close",
+          "Content-Length": "149",
+          "Content-Type": "application/json",
+          "Date": "Thu, 14 May 2026 09:19:30 GMT",
+          "Server": "cloudflare",
+          "Server-Timing": "cfEdge;dur=11,cfOrigin;dur=0,cfWorker;dur=4",
+          "Vary": "accept-encoding",
+          "X-Catalyst-Version": "3.0.0-turbo",
+          "X-Request-ID": "req_1778750370479_vh2288",
+          "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "json": {
+          "depth": 46,
+          "job_id": "v3t_1778750370479",
+          "qubits": 8,
+          "result": {
+            "measurement": {
+              "00000000": 1024
+            },
+            "top_states": [
+              [
+                "00000000",
+                1024
+              ]
+            ]
+          },
+          "status": "completed"
+        },
+        "latency_ms": 71.723,
+        "ok": true,
+        "response_bytes": 149,
+        "response_sha256": "69bda98679e75f1fe6123e82fafdf863728d79fa7342c27fadae7f5ab0e04008",
+        "status_code": 200
+      },
+      "billing_estimate": {
+        "circuit_runs": 1,
+        "compute_units": 442368,
+        "gate_count": 54,
+        "qubits": 8,
+        "shots": 1024
+      },
+      "description": "Pseudo-random forward evolution followed by its exact inverse layer to test reversibility.",
+      "family": "Loschmidt Echo",
+      "id": "google_echo_8",
+      "payload_bytes": 2651,
+      "prepare_time_us": 107.709,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/execute",
+        "url": "https://api.strategic-innovations.ai/v3turbo/execute"
+      },
+      "size_label": "8 qubits",
+      "source_url": "https://catalyst-q.strategic-innovations.ai",
+      "suite": "Catalyst Sampling",
+      "workload_type": "circuit"
+    }
+  ],
+  "disclaimer": "Public harness results validate SDK request generation and billing estimates; they are not a formal complexity proof.",
+  "generated_at": "deterministic-local",
+  "harness": "catalyst-q-public-benchmark-harness",
+  "harness_version": "0.1.0",
+  "mode": "live-api",
+  "sources": {
+    "biq_mac": "https://biqmac.aau.at/biqmaclib.html",
+    "mqt_bench": "https://github.com/munich-quantum-toolkit/bench",
+    "orlib_knapsack": "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/mknapinfo.html",
+    "orlib_portfolio": "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/portinfo.html",
+    "qasmbench": "https://github.com/pnnl/QASMBench",
+    "qedc": "https://quantumconsortium.org/publication/application-oriented-performance-benchmarks-for-quantum-computing/",
+    "satlib": "https://www.cs.ubc.ca/~hoos/SATLIB/",
+    "supermarq": "https://www.scholars.northwestern.edu/en/publications/supermarq-a-scalable-quantum-benchmark-suite",
+    "tsplib": "https://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/index.html"
+  },
+  "summary": {
+    "executed_cases": 14,
+    "max_qubits": 16,
+    "median_latency_ms": 69.023,
+    "quantum_cases": 7,
+    "solver_cases": 7,
+    "successful_api_cases": 14,
+    "suite_count": 12,
+    "suites": [
+      "Biq Mac Library",
+      "Catalyst Arithmetic",
+      "Catalyst Biocomputation",
+      "Catalyst Sampling",
+      "MQT Bench",
+      "OR-Library Knapsack",
+      "OR-Library Portfolio",
+      "QASMBench",
+      "QED-C Application-Oriented Benchmarks",
+      "SATLIB",
+      "SupermarQ",
+      "TSPLIB"
+    ],
+    "total_cases": 14,
+    "total_compute_units": 2080390,
+    "total_payload_bytes": 22750
+  }
+}

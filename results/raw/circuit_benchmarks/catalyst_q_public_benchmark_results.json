@@ -1,0 +1,365 @@
+{
+  "benchmarks": [
+    {
+      "billing_estimate": {
+        "circuit_runs": 1,
+        "compute_units": 285696,
+        "gate_count": 31,
+        "qubits": 9,
+        "shots": 1024
+      },
+      "description": "Application-oriented oracle circuit representative used for SDK request validation.",
+      "family": "Bernstein-Vazirani",
+      "id": "qedc_bernstein_vazirani_8",
+      "payload_bytes": 1778,
+      "prepare_time_us": 426.625,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/execute",
+        "url": "https://api.strategic-innovations.ai/v3turbo/execute"
+      },
+      "size_label": "8-bit hidden string",
+      "source_url": "https://quantumconsortium.org/publication/application-oriented-performance-benchmarks-for-quantum-computing/",
+      "suite": "QED-C Application-Oriented Benchmarks",
+      "workload_type": "circuit"
+    },
+    {
+      "billing_estimate": {
+        "circuit_runs": 1,
+        "compute_units": 524288,
+        "gate_count": 32,
+        "qubits": 16,
+        "shots": 1024
+      },
+      "description": "Scalable entanglement workload aligned with SupermarQ-style application benchmarks.",
+      "family": "GHZ",
+      "id": "supermarq_ghz_16",
+      "payload_bytes": 2060,
+      "prepare_time_us": 39.334,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/execute",
+        "url": "https://api.strategic-innovations.ai/v3turbo/execute"
+      },
+      "size_label": "16 qubits",
+      "source_url": "https://www.scholars.northwestern.edu/en/publications/supermarq-a-scalable-quantum-benchmark-suite",
+      "suite": "SupermarQ",
+      "workload_type": "circuit"
+    },
+    {
+      "billing_estimate": {
+        "circuit_runs": 1,
+        "compute_units": 393216,
+        "gate_count": 48,
+        "qubits": 8,
+        "shots": 1024
+      },
+      "description": "Parameterized optimization circuit with alternating cost and mixer layers.",
+      "family": "QAOA ring",
+      "id": "supermarq_qaoa_ring_8",
+      "payload_bytes": 2781,
+      "prepare_time_us": 44.584,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/execute",
+        "url": "https://api.strategic-innovations.ai/v3turbo/execute"
+      },
+      "size_label": "8 qubits, one layer",
+      "source_url": "https://www.scholars.northwestern.edu/en/publications/supermarq-a-scalable-quantum-benchmark-suite",
+      "suite": "SupermarQ",
+      "workload_type": "circuit"
+    },
+    {
+      "billing_estimate": {
+        "circuit_runs": 1,
+        "compute_units": 112640,
+        "gate_count": 22,
+        "qubits": 5,
+        "shots": 1024
+      },
+      "description": "OpenQASM request-preparation path modeled on QASMBench-style circuit artifacts.",
+      "family": "QFT",
+      "id": "qasmbench_qft_5_qasm",
+      "payload_bytes": 1430,
+      "prepare_time_us": 179.625,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/execute/qasm",
+        "url": "https://api.strategic-innovations.ai/v3turbo/execute/qasm"
+      },
+      "size_label": "5 qubits",
+      "source_url": "https://github.com/pnnl/QASMBench",
+      "suite": "QASMBench",
+      "workload_type": "qasm"
+    },
+    {
+      "billing_estimate": {
+        "circuit_runs": 1,
+        "compute_units": 282624,
+        "gate_count": 46,
+        "qubits": 6,
+        "shots": 1024
+      },
+      "description": "Algorithm-level Grover-style circuit for broad SDK gate coverage.",
+      "family": "Grover",
+      "id": "mqtbench_grover_6",
+      "payload_bytes": 2107,
+      "prepare_time_us": 41.0,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/execute",
+        "url": "https://api.strategic-innovations.ai/v3turbo/execute"
+      },
+      "size_label": "6 qubits",
+      "source_url": "https://github.com/munich-quantum-toolkit/bench",
+      "suite": "MQT Bench",
+      "workload_type": "circuit"
+    },
+    {
+      "billing_estimate": {
+        "compute_units": 1720,
+        "problem_size": 20,
+        "solver_runs": 1
+      },
+      "description": "DIMACS-style random 3-SAT instance shape for SAT solver payload validation.",
+      "family": "Random 3-SAT",
+      "id": "satlib_random_3sat_20",
+      "payload_bytes": 1737,
+      "prepare_time_us": 79.75,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/solve/sat",
+        "url": "https://api.strategic-innovations.ai/v3turbo/solve/sat"
+      },
+      "size_label": "20 variables, 86 clauses",
+      "source_url": "https://www.cs.ubc.ca/~hoos/SATLIB/",
+      "suite": "SATLIB",
+      "workload_type": "solver"
+    },
+    {
+      "billing_estimate": {
+        "compute_units": 100,
+        "problem_size": 10,
+        "solver_runs": 1
+      },
+      "description": "Complete integer-distance TSP instance shaped after TSPLIB-style Euclidean problems.",
+      "family": "Euclidean TSP",
+      "id": "tsplib_euclidean_10",
+      "payload_bytes": 1166,
+      "prepare_time_us": 50.125,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/solve/tsp",
+        "url": "https://api.strategic-innovations.ai/v3turbo/solve/tsp"
+      },
+      "size_label": "10 cities",
+      "source_url": "https://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/index.html",
+      "suite": "TSPLIB",
+      "workload_type": "solver"
+    },
+    {
+      "billing_estimate": {
+        "compute_units": 576,
+        "problem_size": 12,
+        "solver_runs": 1
+      },
+      "description": "Single-constraint knapsack payload derived from OR-Library-style item/capacity data.",
+      "family": "0/1 knapsack",
+      "id": "orlib_mknap_12",
+      "payload_bytes": 883,
+      "prepare_time_us": 16.25,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/solve/knapsack",
+        "url": "https://api.strategic-innovations.ai/v3turbo/solve/knapsack"
+      },
+      "size_label": "12 items",
+      "source_url": "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/mknapinfo.html",
+      "suite": "OR-Library Knapsack",
+      "workload_type": "solver"
+    },
+    {
+      "billing_estimate": {
+        "compute_units": 64,
+        "problem_size": 8,
+        "solver_runs": 1
+      },
+      "description": "Mean/covariance portfolio payload shaped after OR-Library portfolio benchmark fields.",
+      "family": "Cardinality-constrained portfolio",
+      "id": "orlib_portfolio_8",
+      "payload_bytes": 1432,
+      "prepare_time_us": 52.333,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/solve/portfolio",
+        "url": "https://api.strategic-innovations.ai/v3turbo/solve/portfolio"
+      },
+      "size_label": "8 assets",
+      "source_url": "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/portinfo.html",
+      "suite": "OR-Library Portfolio",
+      "workload_type": "solver"
+    },
+    {
+      "billing_estimate": {
+        "compute_units": 36,
+        "problem_size": 6,
+        "solver_runs": 1
+      },
+      "description": "Small dense QUBO payload for public SDK route and validator coverage.",
+      "family": "Binary quadratic optimization",
+      "id": "biqmac_qubo_6",
+      "payload_bytes": 985,
+      "prepare_time_us": 16.416,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/solve/qubo",
+        "url": "https://api.strategic-innovations.ai/v3turbo/solve/qubo"
+      },
+      "size_label": "6 binary variables",
+      "source_url": "https://biqmac.aau.at/biqmaclib.html",
+      "suite": "Biq Mac Library",
+      "workload_type": "solver"
+    },
+    {
+      "billing_estimate": {
+        "compute_units": 54,
+        "problem_size": 6,
+        "solver_runs": 1
+      },
+      "description": "Weighted Max-Cut payload for public SDK route and validator coverage.",
+      "family": "Max-Cut",
+      "id": "biqmac_maxcut_6",
+      "payload_bytes": 1049,
+      "prepare_time_us": 20.833,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/solve/maxcut",
+        "url": "https://api.strategic-innovations.ai/v3turbo/solve/maxcut"
+      },
+      "size_label": "6 nodes, 9 weighted edges",
+      "source_url": "https://biqmac.aau.at/biqmaclib.html",
+      "suite": "Biq Mac Library",
+      "workload_type": "solver"
+    },
+    {
+      "billing_estimate": {
+        "compute_units": 144,
+        "problem_size": 12,
+        "solver_runs": 1
+      },
+      "description": "Hierarchical DAG closure mapped to QUBO for massive classification taxonomies.",
+      "family": "DAG Optimization",
+      "id": "cafa6_dag_optimization_12",
+      "payload_bytes": 1494,
+      "prepare_time_us": 36.792,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/solve/qubo",
+        "url": "https://api.strategic-innovations.ai/v3turbo/solve/qubo"
+      },
+      "size_label": "12 nodes, 11 dependencies",
+      "source_url": "https://catalyst-q.strategic-innovations.ai",
+      "suite": "Catalyst Biocomputation",
+      "workload_type": "solver"
+    },
+    {
+      "billing_estimate": {
+        "circuit_runs": 1,
+        "compute_units": 36864,
+        "gate_count": 9,
+        "qubits": 4,
+        "shots": 1024
+      },
+      "description": "1-bit full adder testing Toffoli and CNOT synthesis.",
+      "family": "Adder",
+      "id": "cafa6_full_adder_4",
+      "payload_bytes": 1197,
+      "prepare_time_us": 25.959,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/execute",
+        "url": "https://api.strategic-innovations.ai/v3turbo/execute"
+      },
+      "size_label": "4 qubits",
+      "source_url": "https://catalyst-q.strategic-innovations.ai",
+      "suite": "Catalyst Arithmetic",
+      "workload_type": "circuit"
+    },
+    {
+      "billing_estimate": {
+        "circuit_runs": 1,
+        "compute_units": 442368,
+        "gate_count": 54,
+        "qubits": 8,
+        "shots": 1024
+      },
+      "description": "Pseudo-random forward evolution followed by its exact inverse layer to test reversibility.",
+      "family": "Loschmidt Echo",
+      "id": "google_echo_8",
+      "payload_bytes": 2651,
+      "prepare_time_us": 50.958,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/execute",
+        "url": "https://api.strategic-innovations.ai/v3turbo/execute"
+      },
+      "size_label": "8 qubits",
+      "source_url": "https://catalyst-q.strategic-innovations.ai",
+      "suite": "Catalyst Sampling",
+      "workload_type": "circuit"
+    }
+  ],
+  "disclaimer": "Public harness results validate SDK request generation and billing estimates; they are not a formal complexity proof.",
+  "generated_at": "deterministic-local",
+  "harness": "catalyst-q-public-benchmark-harness",
+  "harness_version": "0.1.0",
+  "mode": "request-preparation",
+  "sources": {
+    "biq_mac": "https://biqmac.aau.at/biqmaclib.html",
+    "mqt_bench": "https://github.com/munich-quantum-toolkit/bench",
+    "orlib_knapsack": "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/mknapinfo.html",
+    "orlib_portfolio": "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/portinfo.html",
+    "qasmbench": "https://github.com/pnnl/QASMBench",
+    "qedc": "https://quantumconsortium.org/publication/application-oriented-performance-benchmarks-for-quantum-computing/",
+    "satlib": "https://www.cs.ubc.ca/~hoos/SATLIB/",
+    "supermarq": "https://www.scholars.northwestern.edu/en/publications/supermarq-a-scalable-quantum-benchmark-suite",
+    "tsplib": "https://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/index.html"
+  },
+  "summary": {
+    "max_qubits": 16,
+    "quantum_cases": 7,
+    "solver_cases": 7,
+    "suite_count": 12,
+    "suites": [
+      "Biq Mac Library",
+      "Catalyst Arithmetic",
+      "Catalyst Biocomputation",
+      "Catalyst Sampling",
+      "MQT Bench",
+      "OR-Library Knapsack",
+      "OR-Library Portfolio",
+      "QASMBench",
+      "QED-C Application-Oriented Benchmarks",
+      "SATLIB",
+      "SupermarQ",
+      "TSPLIB"
+    ],
+    "total_cases": 14,
+    "total_compute_units": 2080390,
+    "total_payload_bytes": 22750
+  }
+}
