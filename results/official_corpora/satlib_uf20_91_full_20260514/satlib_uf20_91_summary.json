@@ -1,0 +1,47 @@
+{
+  "by_solver": {
+    "cadical": {
+      "median_runtime_s": 0.007983896,
+      "records": 1000,
+      "total_runtime_s": 8.127082,
+      "valid_rate": 1.0,
+      "valid_records": 1000
+    },
+    "catalyst-q-sdk-live": {
+      "median_runtime_s": 0.840183563,
+      "records": 1000,
+      "total_runtime_s": 1481.134243,
+      "valid_rate": 0.799,
+      "valid_records": 799
+    },
+    "kissat": {
+      "median_runtime_s": 0.009750708,
+      "records": 1000,
+      "total_runtime_s": 10.048748,
+      "valid_rate": 1.0,
+      "valid_records": 1000
+    }
+  },
+  "campaign": "satlib_uf20_91_sequential",
+  "claim_scope": "official-corpus-run",
+  "disclaimer": "This is sequential benchmark evidence on a named official SATLIB corpus. It is not a broad NP or SOTA proof.",
+  "download": {
+    "bytes": 323695,
+    "content_type": "application/x-gzip",
+    "elapsed_s": 5.140845,
+    "last_modified": "Mon, 01 Sep 2003 16:17:26 GMT",
+    "sha256": "be2835295e8500bb28f0314eba70bd0deaff1250b187260f7b6d0772bdf111a5",
+    "url": "https://www.cs.ubc.ca/~hoos/SATLIB/Benchmarks/SAT/RND3SAT/uf20-91.tar.gz"
+  },
+  "records": 3000,
+  "runtime_s": 779.159325,
+  "selected_instances": 1000,
+  "solvers": [
+    "cadical",
+    "catalyst-q-sdk-live",
+    "kissat"
+  ],
+  "source_url": "https://www.cs.ubc.ca/~hoos/SATLIB/Benchmarks/SAT/RND3SAT/uf20-91.tar.gz",
+  "temp_directory_removed": true,
+  "total_available_instances": 1000
+}

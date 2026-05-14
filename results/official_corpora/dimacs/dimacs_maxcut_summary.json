@@ -1,0 +1,34 @@
+{
+  "by_solver": {
+    "catalyst-q-sdk-request": {
+      "median_runtime_s": 0.0043785,
+      "records": 3,
+      "total_runtime_s": 0.015409,
+      "valid_rate": 1.0,
+      "valid_records": 3
+    },
+    "greedy-partition-baseline": {
+      "median_runtime_s": 1.536893292,
+      "records": 3,
+      "total_runtime_s": 4.661162,
+      "valid_rate": 1.0,
+      "valid_records": 3
+    }
+  },
+  "campaign": "dimacs_maxcut_sequential",
+  "claim_scope": "official-corpus-run",
+  "disclaimer": "This is sequential benchmark evidence on a named official corpus. It is not a broad NP or SOTA proof.",
+  "download": {
+    "url": "multiple"
+  },
+  "records": 6,
+  "runtime_s": 5.929582,
+  "selected_instances": 3,
+  "solvers": [
+    "catalyst-q-sdk-request",
+    "greedy-partition-baseline"
+  ],
+  "source_url": "https://web.stanford.edu/~yyye/yyye/Gset/",
+  "temp_directory_removed": true,
+  "total_available_instances": 3
+}

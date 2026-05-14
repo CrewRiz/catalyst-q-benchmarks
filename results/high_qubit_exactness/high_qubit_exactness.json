@@ -1,0 +1,501 @@
+{
+  "campaign": "high_qubit_exactness",
+  "cases": [
+    {
+      "absolute_error": 2.220446049250313e-16,
+      "dense_statevector_memory": {
+        "complex128_bytes_formula": "2^68 bytes",
+        "log10_16gb_ratio": 10.23502,
+        "log10_bytes": 20.47004,
+        "over_16gb_dense_limit": true
+      },
+      "exact": true,
+      "expected": {
+        "log2_probability": -1.0,
+        "probability": 0.5
+      },
+      "family": "GHZ",
+      "gate_count": 64,
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "processor": "arm",
+        "python": "3.9.6"
+      },
+      "id": "supermarq_ghz_64",
+      "materialized_states": 0,
+      "metric": "probability",
+      "observed": {
+        "log2_probability": -1.0000000000000002,
+        "probability": 0.4999999999999999
+      },
+      "public_strategy": "structured_entanglement_certificate",
+      "qubits": 64,
+      "query": "basis_probability_zero",
+      "query_details": {
+        "basis_label": "all_zero",
+        "basis_state_bit_length": 0,
+        "basis_state_sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d"
+      },
+      "runtime_s": 0.000238041,
+      "scope": "smoke_reference",
+      "source_url": "https://www.scholars.northwestern.edu/en/publications/supermarq-a-scalable-quantum-benchmark-suite",
+      "state_space_basis_states": "2^64",
+      "suite": "SuperMarQ",
+      "visited_nodes": 64
+    },
+    {
+      "absolute_error": 2.220446049250313e-16,
+      "dense_statevector_memory": {
+        "complex128_bytes_formula": "2^4100 bytes",
+        "log10_16gb_ratio": 1223.987962,
+        "log10_bytes": 1234.222982,
+        "over_16gb_dense_limit": true
+      },
+      "exact": true,
+      "expected": {
+        "log2_probability": -1.0,
+        "probability": 0.5
+      },
+      "family": "GHZ",
+      "gate_count": 4096,
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "processor": "arm",
+        "python": "3.9.6"
+      },
+      "id": "supermarq_ghz_4096",
+      "materialized_states": 0,
+      "metric": "probability",
+      "observed": {
+        "log2_probability": -1.0000000000000002,
+        "probability": 0.4999999999999999
+      },
+      "public_strategy": "structured_entanglement_certificate",
+      "qubits": 4096,
+      "query": "basis_probability_all_ones",
+      "query_details": {
+        "basis_label": "all_one",
+        "basis_state_bit_length": 4096,
+        "basis_state_sha256": "9f56cda75fefeab90f6fa5d5ddc9601544b121732c5ecccab32e631060453a5d"
+      },
+      "runtime_s": 0.020686958,
+      "scope": "targeted_exact_observable",
+      "source_url": "https://www.scholars.northwestern.edu/en/publications/supermarq-a-scalable-quantum-benchmark-suite",
+      "state_space_basis_states": "2^4096",
+      "suite": "SuperMarQ",
+      "visited_nodes": 4096
+    },
+    {
+      "absolute_error": 0.0,
+      "dense_statevector_memory": {
+        "complex128_bytes_formula": "2^1004 bytes",
+        "log10_16gb_ratio": 291.999096,
+        "log10_bytes": 302.234116,
+        "over_16gb_dense_limit": true
+      },
+      "exact": true,
+      "expected": {
+        "log2_probability": -1000.0,
+        "probability": 9.332636185032189e-302
+      },
+      "family": "Uniform superposition",
+      "gate_count": 1000,
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "processor": "arm",
+        "python": "3.9.6"
+      },
+      "id": "qedc_uniform_h_1000",
+      "materialized_states": 0,
+      "metric": "probability",
+      "observed": {
+        "log2_probability": -1000.0,
+        "probability": 9.332636185032189e-302
+      },
+      "public_strategy": "separable_product_certificate",
+      "qubits": 1000,
+      "query": "basis_probability_alternating",
+      "query_details": {
+        "basis_label": "pattern",
+        "basis_state_bit_length": 1000,
+        "basis_state_sha256": "b2ba2649cb90a40767f07f4501016ffacb14c7c2fbed7d197c9b8eac9b045f26"
+      },
+      "runtime_s": 0.002560042,
+      "scope": "targeted_exact_observable",
+      "source_url": "https://quantumconsortium.org/publication/application-oriented-performance-benchmarks-for-quantum-computing/",
+      "state_space_basis_states": "2^1000",
+      "suite": "QED-C application-oriented",
+      "visited_nodes": 1000
+    },
+    {
+      "absolute_error": 7.105427357601002e-15,
+      "dense_statevector_memory": {
+        "complex128_bytes_formula": "2^36 bytes",
+        "log10_16gb_ratio": 0.60206,
+        "log10_bytes": 10.83708,
+        "over_16gb_dense_limit": true
+      },
+      "exact": true,
+      "expected": {
+        "log2_probability": -32.0,
+        "probability": 2.3283064365386963e-10
+      },
+      "family": "QFT-style diagonal phase",
+      "gate_count": 528,
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "processor": "arm",
+        "python": "3.9.6"
+      },
+      "id": "qasmbench_qft_phase_32",
+      "materialized_states": 0,
+      "metric": "probability",
+      "observed": {
+        "log2_probability": -32.00000000000001,
+        "probability": 2.328306436538689e-10
+      },
+      "public_strategy": "diagonal_phase_certificate",
+      "qubits": 32,
+      "query": "basis_probability_pattern",
+      "query_details": {
+        "basis_label": "pattern",
+        "basis_state_bit_length": 31,
+        "basis_state_sha256": "560d2a25687f3be933677f9718ceb288331f74d635d24a5e318a028b9fb32a9f"
+      },
+      "runtime_s": 0.001672917,
+      "scope": "smoke_reference",
+      "source_url": "https://github.com/pnnl/QASMBench",
+      "state_space_basis_states": "2^32",
+      "suite": "QASMBench / MQT Bench",
+      "visited_nodes": 560
+    },
+    {
+      "absolute_error": 3.8441118045778984e-15,
+      "dense_statevector_memory": {
+        "complex128_bytes_formula": "2^36 bytes",
+        "log10_16gb_ratio": 0.60206,
+        "log10_bytes": 10.83708,
+        "over_16gb_dense_limit": true
+      },
+      "exact": true,
+      "expected": {
+        "log2_probability": 0.0,
+        "probability": 1.0
+      },
+      "family": "Unstructured brickwork echo",
+      "gate_count": 380,
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "processor": "arm",
+        "python": "3.9.6"
+      },
+      "id": "qedc_brickwork_echo_32",
+      "materialized_states": 0,
+      "metric": "probability",
+      "observed": {
+        "log2_probability": 3.8441118045778984e-15,
+        "probability": 1.0000000000000027
+      },
+      "public_strategy": "adaptive_query_contraction",
+      "qubits": 32,
+      "query": "basis_probability_zero",
+      "query_details": {
+        "basis_label": "all_zero",
+        "basis_state_bit_length": 0,
+        "basis_state_sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d"
+      },
+      "runtime_s": 2.793936584,
+      "scope": "smoke_reference",
+      "source_url": "https://quantumconsortium.org/publication/quantum-algorithm-exploration-using-application-oriented-performance-benchmarks/",
+      "state_space_basis_states": "2^32",
+      "suite": "QED-C application-oriented",
+      "visited_nodes": 8570
+    },
+    {
+      "absolute_error": 7.688223609155792e-15,
+      "dense_statevector_memory": {
+        "complex128_bytes_formula": "2^68 bytes",
+        "log10_16gb_ratio": 10.23502,
+        "log10_bytes": 20.47004,
+        "over_16gb_dense_limit": true
+      },
+      "exact": true,
+      "expected": {
+        "log2_probability": 0.0,
+        "probability": 1.0
+      },
+      "family": "Unstructured brickwork echo",
+      "gate_count": 764,
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "processor": "arm",
+        "python": "3.9.6"
+      },
+      "id": "qedc_brickwork_echo_64",
+      "materialized_states": 0,
+      "metric": "probability",
+      "observed": {
+        "log2_probability": 7.688223609155792e-15,
+        "probability": 1.0000000000000053
+      },
+      "public_strategy": "adaptive_query_contraction",
+      "qubits": 64,
+      "query": "basis_probability_zero",
+      "query_details": {
+        "basis_label": "all_zero",
+        "basis_state_bit_length": 0,
+        "basis_state_sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d"
+      },
+      "runtime_s": 20.934170667,
+      "scope": "targeted_exact_observable",
+      "source_url": "https://quantumconsortium.org/publication/quantum-algorithm-exploration-using-application-oriented-performance-benchmarks/",
+      "state_space_basis_states": "2^64",
+      "suite": "QED-C application-oriented",
+      "visited_nodes": 17530
+    },
+    {
+      "absolute_error": 1.1368683772161603e-13,
+      "dense_statevector_memory": {
+        "complex128_bytes_formula": "2^516 bytes",
+        "log10_16gb_ratio": 145.096458,
+        "log10_bytes": 155.331478,
+        "over_16gb_dense_limit": true
+      },
+      "exact": true,
+      "expected": {
+        "log2_probability": -512.0,
+        "probability": 7.458340731200207e-155
+      },
+      "family": "QFT-style diagonal phase",
+      "gate_count": 131328,
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "processor": "arm",
+        "python": "3.9.6"
+      },
+      "id": "qasmbench_qft_phase_512",
+      "materialized_states": 0,
+      "metric": "probability",
+      "observed": {
+        "log2_probability": -512.0000000000001,
+        "probability": 7.458340731199692e-155
+      },
+      "public_strategy": "diagonal_phase_certificate",
+      "qubits": 512,
+      "query": "basis_probability_pattern",
+      "query_details": {
+        "basis_label": "pattern",
+        "basis_state_bit_length": 511,
+        "basis_state_sha256": "a24be5a20a79a42bee53af5e6f97d94fc3dd86db96e638d756e4935fedeb4317"
+      },
+      "runtime_s": 0.490688875,
+      "scope": "targeted_exact_observable",
+      "source_url": "https://github.com/pnnl/QASMBench",
+      "state_space_basis_states": "2^512",
+      "suite": "QASMBench / MQT Bench",
+      "visited_nodes": 131840
+    },
+    {
+      "absolute_error": 1.695830344760954e-167,
+      "dense_statevector_memory": {
+        "complex128_bytes_formula": "2^1028 bytes",
+        "log10_16gb_ratio": 299.223816,
+        "log10_bytes": 309.458836,
+        "over_16gb_dense_limit": true
+      },
+      "exact": true,
+      "expected": {
+        "abs": 7.458340731200207e-155,
+        "imag": 0.0,
+        "real": 7.458340731200207e-155
+      },
+      "family": "1D phase mixer",
+      "gate_count": 3071,
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "processor": "arm",
+        "python": "3.9.6"
+      },
+      "id": "supermarq_phase_chain_1024",
+      "materialized_states": 0,
+      "metric": "amplitude",
+      "observed": {
+        "abs": 7.458340731198511e-155,
+        "imag": 0.0,
+        "real": 7.458340731198511e-155
+      },
+      "public_strategy": "chain_phase_certificate",
+      "qubits": 1024,
+      "query": "basis_amplitude_zero",
+      "query_details": {
+        "basis_label": "all_zero",
+        "basis_state_bit_length": 0,
+        "basis_state_sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d"
+      },
+      "runtime_s": 33.356540625,
+      "scope": "targeted_exact_observable",
+      "source_url": "https://www.scholars.northwestern.edu/en/publications/supermarq-a-scalable-quantum-benchmark-suite",
+      "state_space_basis_states": "2^1024",
+      "suite": "SuperMarQ-style application circuit",
+      "visited_nodes": 4094
+    },
+    {
+      "absolute_error": 4.547473508864641e-13,
+      "dense_statevector_memory": {
+        "complex128_bytes_formula": "2^2052 bytes",
+        "log10_16gb_ratio": 607.478531,
+        "log10_bytes": 617.713551,
+        "over_16gb_dense_limit": true
+      },
+      "exact": true,
+      "expected": {
+        "log2_probability": -2048.0,
+        "probability": 0.0
+      },
+      "family": "Parameterized product rotations",
+      "gate_count": 6144,
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "processor": "arm",
+        "python": "3.9.6"
+      },
+      "id": "qedc_product_rotations_2048",
+      "materialized_states": 0,
+      "metric": "probability",
+      "observed": {
+        "log2_probability": -2048.0000000000005,
+        "probability": 0.0
+      },
+      "public_strategy": "separable_product_certificate",
+      "qubits": 2048,
+      "query": "basis_probability_periodic",
+      "query_details": {
+        "basis_label": "pattern",
+        "basis_state_bit_length": 2047,
+        "basis_state_sha256": "f68f851dd0a76d418720eba5f027dacab2c885b1107cb6d740b9acebcf179283"
+      },
+      "runtime_s": 0.0358445,
+      "scope": "targeted_exact_observable",
+      "source_url": "https://quantumconsortium.org/publication/quantum-algorithm-exploration-using-application-oriented-performance-benchmarks/",
+      "state_space_basis_states": "2^2048",
+      "suite": "QED-C application-oriented",
+      "visited_nodes": 8192
+    },
+    {
+      "absolute_error": 8.71842416900956e-18,
+      "dense_statevector_memory": {
+        "complex128_bytes_formula": "2^260 bytes",
+        "log10_16gb_ratio": 68.032779,
+        "log10_bytes": 78.267799,
+        "over_16gb_dense_limit": true
+      },
+      "exact": true,
+      "expected": {
+        "abs": 6.730765058463587e-18,
+        "imag": 4.9996392230497455e-19,
+        "real": 6.712170613790129e-18
+      },
+      "family": "Dense symmetric phase mixer",
+      "gate_count": 33152,
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "processor": "arm",
+        "python": "3.9.6"
+      },
+      "id": "mqt_symmetric_phase_256",
+      "materialized_states": 0,
+      "metric": "amplitude",
+      "observed": {
+        "abs": 7.651578248720627e-18,
+        "imag": 7.500072105413969e-18,
+        "real": 1.5151132333544895e-18
+      },
+      "public_strategy": "symmetric_orbit_certificate",
+      "qubits": 256,
+      "query": "basis_amplitude_alternating",
+      "query_details": {
+        "basis_label": "pattern",
+        "basis_state_bit_length": 256,
+        "basis_state_sha256": "e0e77a507412b120f6ede61f62295b1a7b2ff19d3dcc8f7253e51663470c888e"
+      },
+      "runtime_s": 0.31628825,
+      "scope": "targeted_exact_observable",
+      "source_url": "https://github.com/munich-quantum-toolkit/bench",
+      "state_space_basis_states": "2^256",
+      "suite": "MQT Bench / SuperMarQ-style",
+      "visited_nodes": 49793
+    },
+    {
+      "absolute_error": 2.220446049250313e-16,
+      "dense_statevector_memory": {
+        "complex128_bytes_formula": "2^4100 bytes",
+        "log10_16gb_ratio": 1223.987962,
+        "log10_bytes": 1234.222982,
+        "over_16gb_dense_limit": true
+      },
+      "exact": true,
+      "expected": {
+        "abs": 1.0,
+        "imag": 0.0,
+        "real": 1.0
+      },
+      "family": "GHZ Pauli observable",
+      "gate_count": 4096,
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "processor": "arm",
+        "python": "3.9.6"
+      },
+      "id": "supermarq_ghz_4096_x_observable",
+      "materialized_states": 0,
+      "metric": "observable",
+      "observed": {
+        "abs": 0.9999999999999998,
+        "imag": 0.0,
+        "real": 0.9999999999999998
+      },
+      "public_strategy": "structured_entanglement_certificate",
+      "qubits": 4096,
+      "query": "pauli_x_all",
+      "query_details": {
+        "observable": "all-X"
+      },
+      "runtime_s": 0.022773875,
+      "scope": "targeted_exact_observable",
+      "source_url": "https://www.scholars.northwestern.edu/en/publications/supermarq-a-scalable-quantum-benchmark-suite",
+      "state_space_basis_states": "2^4096",
+      "suite": "SuperMarQ",
+      "visited_nodes": 4096
+    }
+  ],
+  "claim_scope": "query-native-targeted-exactness",
+  "disclaimer": "This campaign validates compact exact execution answers for named structured and bounded-contraction circuits. It is not a claim that arbitrary dense output distributions can be materialized at these widths.",
+  "generated_at": "deterministic-local",
+  "sources": {
+    "mqt_bench": "https://github.com/munich-quantum-toolkit/bench",
+    "qasmbench": "https://github.com/pnnl/QASMBench",
+    "qedc": "https://quantumconsortium.org/publication/application-oriented-performance-benchmarks-for-quantum-computing/",
+    "qedc_exploration": "https://quantumconsortium.org/publication/quantum-algorithm-exploration-using-application-oriented-performance-benchmarks/",
+    "supermarq": "https://www.scholars.northwestern.edu/en/publications/supermarq-a-scalable-quantum-benchmark-suite"
+  },
+  "summary": {
+    "exact_cases": 11,
+    "max_dense_statevector_log10_bytes": 1234.222982,
+    "max_gate_count": 131328,
+    "max_qubits": 4096,
+    "runtime_s": 58.006441,
+    "total_cases": 11,
+    "zero_materialization_cases": 11
+  }
+}

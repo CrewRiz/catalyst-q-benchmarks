@@ -1,0 +1,34 @@
+{
+  "by_solver": {
+    "catalyst-q-sdk-request": {
+      "median_runtime_s": 0.000388959,
+      "records": 3,
+      "total_runtime_s": 0.001488,
+      "valid_rate": 1.0,
+      "valid_records": 3
+    },
+    "nearest-neighbor-2opt-baseline": {
+      "median_runtime_s": 0.004397167,
+      "records": 3,
+      "total_runtime_s": 0.050414,
+      "valid_rate": 1.0,
+      "valid_records": 3
+    }
+  },
+  "campaign": "tsplib95_sequential",
+  "claim_scope": "official-corpus-run",
+  "disclaimer": "This is sequential benchmark evidence on a named official corpus. It is not a broad NP or SOTA proof.",
+  "download": {
+    "url": "multiple"
+  },
+  "records": 6,
+  "runtime_s": 0.380381,
+  "selected_instances": 3,
+  "solvers": [
+    "catalyst-q-sdk-request",
+    "nearest-neighbor-2opt-baseline"
+  ],
+  "source_url": "http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/tsp/",
+  "temp_directory_removed": true,
+  "total_available_instances": 3
+}

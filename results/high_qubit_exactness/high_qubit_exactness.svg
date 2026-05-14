@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="572" viewBox="0 0 980 572">
+<rect width="100%" height="100%" fill="#f8faf9"/>
+<text x="28" y="36" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#151716">Catalyst-Q High-Qubit Exactness</text>
+<text x="28" y="62" font-family="Arial, sans-serif" font-size="13" fill="#5f6862">Exact targeted reads with zero dense statevector materialization.</text>
+<text x="28" y="111" font-family="Arial, sans-serif" font-size="12" fill="#151716">supermarq_ghz_64</text>
+<rect x="310" y="96" width="8" height="18" rx="3" fill="#0f6b57"/>
+<text x="328" y="110" font-family="Arial, sans-serif" font-size="12" fill="#151716">64q</text>
+<text x="860" y="110" font-family="Arial, sans-serif" font-size="12" fill="#151716">0 states</text>
+<text x="28" y="153" font-family="Arial, sans-serif" font-size="12" fill="#151716">supermarq_ghz_4096</text>
+<rect x="310" y="138" width="520" height="18" rx="3" fill="#0f6b57"/>
+<text x="840" y="152" font-family="Arial, sans-serif" font-size="12" fill="#151716">4096q</text>
+<text x="860" y="152" font-family="Arial, sans-serif" font-size="12" fill="#151716">0 states</text>
+<text x="28" y="195" font-family="Arial, sans-serif" font-size="12" fill="#151716">qedc_uniform_h_1000</text>
+<rect x="310" y="180" width="126" height="18" rx="3" fill="#0f6b57"/>
+<text x="446" y="194" font-family="Arial, sans-serif" font-size="12" fill="#151716">1000q</text>
+<text x="860" y="194" font-family="Arial, sans-serif" font-size="12" fill="#151716">0 states</text>
+<text x="28" y="237" font-family="Arial, sans-serif" font-size="12" fill="#151716">qasmbench_qft_phase_32</text>
+<rect x="310" y="222" width="4" height="18" rx="3" fill="#0f6b57"/>
+<text x="324" y="236" font-family="Arial, sans-serif" font-size="12" fill="#151716">32q</text>
+<text x="860" y="236" font-family="Arial, sans-serif" font-size="12" fill="#151716">0 states</text>
+<text x="28" y="279" font-family="Arial, sans-serif" font-size="12" fill="#151716">qedc_brickwork_echo_32</text>
+<rect x="310" y="264" width="4" height="18" rx="3" fill="#0f6b57"/>
+<text x="324" y="278" font-family="Arial, sans-serif" font-size="12" fill="#151716">32q</text>
+<text x="860" y="278" font-family="Arial, sans-serif" font-size="12" fill="#151716">0 states</text>
+<text x="28" y="321" font-family="Arial, sans-serif" font-size="12" fill="#151716">qedc_brickwork_echo_64</text>
+<rect x="310" y="306" width="8" height="18" rx="3" fill="#0f6b57"/>
+<text x="328" y="320" font-family="Arial, sans-serif" font-size="12" fill="#151716">64q</text>
+<text x="860" y="320" font-family="Arial, sans-serif" font-size="12" fill="#151716">0 states</text>
+<text x="28" y="363" font-family="Arial, sans-serif" font-size="12" fill="#151716">qasmbench_qft_phase_512</text>
+<rect x="310" y="348" width="65" height="18" rx="3" fill="#0f6b57"/>
+<text x="385" y="362" font-family="Arial, sans-serif" font-size="12" fill="#151716">512q</text>
+<text x="860" y="362" font-family="Arial, sans-serif" font-size="12" fill="#151716">0 states</text>
+<text x="28" y="405" font-family="Arial, sans-serif" font-size="12" fill="#151716">supermarq_phase_chain_1024</text>
+<rect x="310" y="390" width="130" height="18" rx="3" fill="#0f6b57"/>
+<text x="450" y="404" font-family="Arial, sans-serif" font-size="12" fill="#151716">1024q</text>
+<text x="860" y="404" font-family="Arial, sans-serif" font-size="12" fill="#151716">0 states</text>
+<text x="28" y="447" font-family="Arial, sans-serif" font-size="12" fill="#151716">qedc_product_rotations_2048</text>
+<rect x="310" y="432" width="260" height="18" rx="3" fill="#0f6b57"/>
+<text x="580" y="446" font-family="Arial, sans-serif" font-size="12" fill="#151716">2048q</text>
+<text x="860" y="446" font-family="Arial, sans-serif" font-size="12" fill="#151716">0 states</text>
+<text x="28" y="489" font-family="Arial, sans-serif" font-size="12" fill="#151716">mqt_symmetric_phase_256</text>
+<rect x="310" y="474" width="32" height="18" rx="3" fill="#0f6b57"/>
+<text x="352" y="488" font-family="Arial, sans-serif" font-size="12" fill="#151716">256q</text>
+<text x="860" y="488" font-family="Arial, sans-serif" font-size="12" fill="#151716">0 states</text>
+<text x="28" y="531" font-family="Arial, sans-serif" font-size="12" fill="#151716">supermarq_ghz_4096_x_observable</text>
+<rect x="310" y="516" width="520" height="18" rx="3" fill="#0f6b57"/>
+<text x="840" y="530" font-family="Arial, sans-serif" font-size="12" fill="#151716">4096q</text>
+<text x="860" y="530" font-family="Arial, sans-serif" font-size="12" fill="#151716">0 states</text>
+</svg>

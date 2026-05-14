@@ -1,0 +1,673 @@
+{
+  "claims": [
+    {
+      "claim": "Catalyst-Q SDK exposes all six public NP helper routes: SAT, TSP, knapsack, portfolio, QUBO, and Max-Cut.",
+      "evidence": "SDK prepared-request records with route validators.",
+      "status": "publishable"
+    },
+    {
+      "claim": "Catalyst-Q live SDK/API matches the exact QUBO reference objective -4.0 on the bundled smoke instance.",
+      "evidence": "Raw record validator.matches_reference for QUBO.",
+      "status": "blocked-until-live-api-run"
+    },
+    {
+      "claim": "Catalyst-Q live SDK/API matches the exact Max-Cut reference objective 9.0 on the bundled smoke instance.",
+      "evidence": "Raw record validator.matches_reference for Max-Cut.",
+      "status": "blocked-until-live-api-run"
+    },
+    {
+      "claim": "Catalyst-Q live SDK/API beats the included greedy heuristic baselines on the bundled QUBO and Max-Cut smoke instances.",
+      "evidence": "QUBO is lower-is-better and Max-Cut is higher-is-better against local heuristic baseline records.",
+      "status": "blocked-until-live-api-run"
+    },
+    {
+      "claim": "Catalyst-Q is broadly best-in-class against commercial and academic SOTA solvers.",
+      "evidence": "Requires full Biq Mac/Gset/QPLIB/TSPLIB/SAT/MaxSAT campaigns against external baselines.",
+      "status": "not-yet-supported"
+    }
+  ],
+  "disclaimer": "No broad NP or SOTA claim is made. Claims are limited to named artifacts and validators.",
+  "external_baselines": [
+    {
+      "available": false,
+      "solver": "Gurobi",
+      "source": "https://www.gurobi.com/solutions/",
+      "tool": "gurobi_cl"
+    },
+    {
+      "available": true,
+      "solver": "SCIP",
+      "source": "https://scipopt.org/",
+      "tool": "scip"
+    },
+    {
+      "available": true,
+      "solver": "HiGHS",
+      "source": "https://highs.dev/",
+      "tool": "highs"
+    },
+    {
+      "available": true,
+      "solver": "Kissat",
+      "source": "https://satcompetition.github.io/",
+      "tool": "kissat"
+    },
+    {
+      "available": true,
+      "solver": "CaDiCaL",
+      "source": "https://satcompetition.github.io/",
+      "tool": "cadical"
+    },
+    {
+      "available": false,
+      "solver": "Concorde",
+      "source": "https://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/index.html",
+      "tool": "concorde"
+    },
+    {
+      "available": false,
+      "solver": "LKH",
+      "source": "https://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/index.html",
+      "tool": "LKH"
+    }
+  ],
+  "generated_at": "live-api-run",
+  "package": "catalyst-q-full-evidence",
+  "quantum_simulator_evidence": [
+    {
+      "command": "python3 -m pytest tests/test_quantum_v2.py Catalyst-API/tests/test_gates.py Catalyst-API/tests/test_universal_gate_set.py Catalyst-API/tests/test_simulator.py -q",
+      "returncode": 0,
+      "runtime_s": 0.391867,
+      "status": "passed",
+      "stderr_tail": "",
+      "stdout_sha256": "72d6895767a2e744a67a6782cc4df08f1c0a093ae3c137372eae80b0c4b60dd9",
+      "stdout_tail": "........................................................................ [ 65%]\n......................................                                   [100%]\n110 passed in 0.21s\n"
+    },
+    {
+      "command": "python3 -m pytest tests/sdk/test_public_benchmark_harness.py tests/sdk/test_proof_harness.py -q",
+      "returncode": 0,
+      "runtime_s": 0.39632,
+      "status": "passed",
+      "stderr_tail": "",
+      "stdout_sha256": "661cc27a2db83afc41ffb9cb1dfa7f808a3742eaaa8ed5e185534ce62c7aa5eb",
+      "stdout_tail": ".............                                                            [100%]\n13 passed in 0.27s\n"
+    }
+  ],
+  "records": [
+    {
+      "command": "exact-enumeration-reference",
+      "domain": "SAT",
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "python": "3.9.6"
+      },
+      "instance_id": "sat_smoke_4",
+      "instance_sha256": "5bc5b4ee7d602fe3014543a6c707d98dedf69a1ce1c7c23346d8bafa459fefbd",
+      "objective": 6,
+      "runtime_s": 0.0,
+      "seed": null,
+      "solver_id": "exact-enumeration-reference",
+      "solver_version": "0.1.0",
+      "status": "optimal",
+      "suite_id": "sat_competition_main",
+      "timeout_s": 30.0,
+      "validator": {
+        "kind": "objective_recomputed",
+        "valid": true
+      }
+    },
+    {
+      "command": "majority-literal-baseline",
+      "domain": "SAT",
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "python": "3.9.6"
+      },
+      "instance_id": "sat_smoke_4",
+      "instance_sha256": "5bc5b4ee7d602fe3014543a6c707d98dedf69a1ce1c7c23346d8bafa459fefbd",
+      "objective": 5,
+      "runtime_s": 0.0,
+      "seed": null,
+      "solver_id": "majority-literal-baseline",
+      "solver_version": "0.1.0",
+      "status": "feasible",
+      "suite_id": "sat_competition_main",
+      "timeout_s": 30.0,
+      "validator": {
+        "kind": "objective_recomputed",
+        "valid": true
+      }
+    },
+    {
+      "command": "exact-enumeration-reference",
+      "domain": "TSP",
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "python": "3.9.6"
+      },
+      "instance_id": "tsplib_style_8",
+      "instance_sha256": "70dd1a776756fae256aeaab42238ca07ba505311f896a00431ebc4728cc3b851",
+      "objective": 45,
+      "runtime_s": 0.0,
+      "seed": null,
+      "solver_id": "exact-enumeration-reference",
+      "solver_version": "0.1.0",
+      "status": "optimal",
+      "suite_id": "tsplib95",
+      "timeout_s": 30.0,
+      "validator": {
+        "kind": "objective_recomputed",
+        "valid": true
+      }
+    },
+    {
+      "command": "nearest-neighbor-2opt-baseline",
+      "domain": "TSP",
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "python": "3.9.6"
+      },
+      "instance_id": "tsplib_style_8",
+      "instance_sha256": "70dd1a776756fae256aeaab42238ca07ba505311f896a00431ebc4728cc3b851",
+      "objective": 45,
+      "runtime_s": 0.0,
+      "seed": null,
+      "solver_id": "nearest-neighbor-2opt-baseline",
+      "solver_version": "0.1.0",
+      "status": "feasible",
+      "suite_id": "tsplib95",
+      "timeout_s": 30.0,
+      "validator": {
+        "kind": "objective_recomputed",
+        "valid": true
+      }
+    },
+    {
+      "command": "exact-dp-reference",
+      "domain": "Knapsack",
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "python": "3.9.6"
+      },
+      "instance_id": "orlib_knapsack_12",
+      "instance_sha256": "7ad81dc82d0dac91e82facbca6bf20edd1f3ea3e2a90745c8d896546bfef1491",
+      "objective": 220,
+      "runtime_s": 0.0,
+      "seed": null,
+      "solver_id": "exact-dp-reference",
+      "solver_version": "0.1.0",
+      "status": "optimal",
+      "suite_id": "or_library_mknap",
+      "timeout_s": 30.0,
+      "validator": {
+        "kind": "objective_recomputed",
+        "valid": true
+      }
+    },
+    {
+      "command": "density-greedy-baseline",
+      "domain": "Knapsack",
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "python": "3.9.6"
+      },
+      "instance_id": "orlib_knapsack_12",
+      "instance_sha256": "7ad81dc82d0dac91e82facbca6bf20edd1f3ea3e2a90745c8d896546bfef1491",
+      "objective": 184,
+      "runtime_s": 0.0,
+      "seed": null,
+      "solver_id": "density-greedy-baseline",
+      "solver_version": "0.1.0",
+      "status": "feasible",
+      "suite_id": "or_library_mknap",
+      "timeout_s": 30.0,
+      "validator": {
+        "kind": "objective_recomputed",
+        "valid": true
+      }
+    },
+    {
+      "command": "exact-enumeration-reference",
+      "domain": "QUBO",
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "python": "3.9.6"
+      },
+      "instance_id": "biqmac_qubo_6",
+      "instance_sha256": "ecd2c648e4fc868cad434ca90b3016a5cd83702d986cb01bf21cfcff031c8828",
+      "objective": -4.0,
+      "runtime_s": 0.0,
+      "seed": null,
+      "solver_id": "exact-enumeration-reference",
+      "solver_version": "0.1.0",
+      "status": "optimal",
+      "suite_id": "biq_mac_maxcut_bqp",
+      "timeout_s": 30.0,
+      "validator": {
+        "kind": "objective_recomputed",
+        "valid": true
+      }
+    },
+    {
+      "command": "single-flip-greedy-baseline",
+      "domain": "QUBO",
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "python": "3.9.6"
+      },
+      "instance_id": "biqmac_qubo_6",
+      "instance_sha256": "ecd2c648e4fc868cad434ca90b3016a5cd83702d986cb01bf21cfcff031c8828",
+      "objective": 0.0,
+      "runtime_s": 0.0,
+      "seed": null,
+      "solver_id": "single-flip-greedy-baseline",
+      "solver_version": "0.1.0",
+      "status": "feasible",
+      "suite_id": "biq_mac_maxcut_bqp",
+      "timeout_s": 30.0,
+      "validator": {
+        "kind": "objective_recomputed",
+        "valid": true
+      }
+    },
+    {
+      "command": "exact-enumeration-reference",
+      "domain": "Max-Cut",
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "python": "3.9.6"
+      },
+      "instance_id": "biqmac_maxcut_6",
+      "instance_sha256": "220d32106c1fef7d332becb9677b97c7fa80d22873e3138ad67a07639321a84d",
+      "objective": 9.0,
+      "runtime_s": 0.0,
+      "seed": null,
+      "solver_id": "exact-enumeration-reference",
+      "solver_version": "0.1.0",
+      "status": "optimal",
+      "suite_id": "biq_mac_maxcut_bqp",
+      "timeout_s": 30.0,
+      "validator": {
+        "kind": "objective_recomputed",
+        "valid": true
+      }
+    },
+    {
+      "command": "greedy-partition-baseline",
+      "domain": "Max-Cut",
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "python": "3.9.6"
+      },
+      "instance_id": "biqmac_maxcut_6",
+      "instance_sha256": "220d32106c1fef7d332becb9677b97c7fa80d22873e3138ad67a07639321a84d",
+      "objective": 6.75,
+      "runtime_s": 0.0,
+      "seed": null,
+      "solver_id": "greedy-partition-baseline",
+      "solver_version": "0.1.0",
+      "status": "feasible",
+      "suite_id": "biq_mac_maxcut_bqp",
+      "timeout_s": 30.0,
+      "validator": {
+        "kind": "objective_recomputed",
+        "valid": true
+      }
+    },
+    {
+      "command": "prepare_sat",
+      "domain": "SAT",
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "python": "3.9.6"
+      },
+      "instance_id": "sat_smoke_4",
+      "instance_sha256": "5bc5b4ee7d602fe3014543a6c707d98dedf69a1ce1c7c23346d8bafa459fefbd",
+      "objective": null,
+      "runtime_s": 4.25e-06,
+      "seed": null,
+      "solver_id": "catalyst-q-sdk-request",
+      "solver_version": "local-or-hosted",
+      "status": "unknown",
+      "suite_id": "sat_competition_main",
+      "timeout_s": 30.0,
+      "validator": {
+        "billing_estimate": {
+          "compute_units": 6,
+          "problem_size": 3,
+          "solver_runs": 1
+        },
+        "kind": "sdk_request_prepared",
+        "route": "/v3turbo/solve/sat",
+        "valid": true
+      }
+    },
+    {
+      "command": "prepare_tsp",
+      "domain": "TSP",
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "python": "3.9.6"
+      },
+      "instance_id": "tsplib_style_8",
+      "instance_sha256": "70dd1a776756fae256aeaab42238ca07ba505311f896a00431ebc4728cc3b851",
+      "objective": null,
+      "runtime_s": 8.75e-07,
+      "seed": null,
+      "solver_id": "catalyst-q-sdk-request",
+      "solver_version": "local-or-hosted",
+      "status": "unknown",
+      "suite_id": "tsplib95",
+      "timeout_s": 30.0,
+      "validator": {
+        "billing_estimate": {
+          "compute_units": 64,
+          "problem_size": 8,
+          "solver_runs": 1
+        },
+        "kind": "sdk_request_prepared",
+        "route": "/v3turbo/solve/tsp",
+        "valid": true
+      }
+    },
+    {
+      "command": "prepare_knapsack",
+      "domain": "Knapsack",
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "python": "3.9.6"
+      },
+      "instance_id": "orlib_knapsack_12",
+      "instance_sha256": "7ad81dc82d0dac91e82facbca6bf20edd1f3ea3e2a90745c8d896546bfef1491",
+      "objective": null,
+      "runtime_s": 5.83e-07,
+      "seed": null,
+      "solver_id": "catalyst-q-sdk-request",
+      "solver_version": "local-or-hosted",
+      "status": "unknown",
+      "suite_id": "or_library_mknap",
+      "timeout_s": 30.0,
+      "validator": {
+        "billing_estimate": {
+          "compute_units": 600,
+          "problem_size": 12,
+          "solver_runs": 1
+        },
+        "kind": "sdk_request_prepared",
+        "route": "/v3turbo/solve/knapsack",
+        "valid": true
+      }
+    },
+    {
+      "command": "prepare_portfolio",
+      "domain": "Portfolio",
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "python": "3.9.6"
+      },
+      "instance_id": "portfolio_smoke_8",
+      "instance_sha256": "ff43d7f94fdd1b68a16ca58aa1817e6b2ee82de1d3310ba6a0cef88239eb7fb7",
+      "objective": null,
+      "runtime_s": 5.41e-07,
+      "seed": null,
+      "solver_id": "catalyst-q-sdk-request",
+      "solver_version": "local-or-hosted",
+      "status": "unknown",
+      "suite_id": "qplib",
+      "timeout_s": 30.0,
+      "validator": {
+        "billing_estimate": {
+          "compute_units": 64,
+          "problem_size": 8,
+          "solver_runs": 1
+        },
+        "kind": "sdk_request_prepared",
+        "route": "/v3turbo/solve/portfolio",
+        "valid": true
+      }
+    },
+    {
+      "command": "prepare_qubo",
+      "domain": "QUBO",
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "python": "3.9.6"
+      },
+      "instance_id": "biqmac_qubo_6",
+      "instance_sha256": "ecd2c648e4fc868cad434ca90b3016a5cd83702d986cb01bf21cfcff031c8828",
+      "objective": null,
+      "runtime_s": 0.008701375,
+      "seed": null,
+      "solver_id": "catalyst-q-sdk-live",
+      "solver_version": "local-or-hosted",
+      "status": "feasible",
+      "suite_id": "biq_mac_maxcut_bqp",
+      "timeout_s": 30.0,
+      "validator": {
+        "api_execution": {
+          "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+          "error_type": "URLError",
+          "headers": {},
+          "latency_ms": 8.469,
+          "ok": false,
+          "response_bytes": 0,
+          "response_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "status_code": 0
+        },
+        "billing_estimate": {
+          "compute_units": 36,
+          "problem_size": 6,
+          "solver_runs": 1
+        },
+        "kind": "sdk_request_prepared",
+        "matches_reference": false,
+        "reference_objective": -4.0,
+        "route": "/v3turbo/solve/qubo",
+        "valid": true
+      }
+    },
+    {
+      "command": "prepare_maxcut",
+      "domain": "Max-Cut",
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "python": "3.9.6"
+      },
+      "instance_id": "biqmac_maxcut_6",
+      "instance_sha256": "220d32106c1fef7d332becb9677b97c7fa80d22873e3138ad67a07639321a84d",
+      "objective": null,
+      "runtime_s": 0.002271958,
+      "seed": null,
+      "solver_id": "catalyst-q-sdk-live",
+      "solver_version": "local-or-hosted",
+      "status": "feasible",
+      "suite_id": "biq_mac_maxcut_bqp",
+      "timeout_s": 30.0,
+      "validator": {
+        "api_execution": {
+          "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+          "error_type": "URLError",
+          "headers": {},
+          "latency_ms": 2.06,
+          "ok": false,
+          "response_bytes": 0,
+          "response_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "status_code": 0
+        },
+        "billing_estimate": {
+          "compute_units": 54,
+          "problem_size": 6,
+          "solver_runs": 1
+        },
+        "kind": "sdk_request_prepared",
+        "matches_reference": false,
+        "reference_objective": 9.0,
+        "route": "/v3turbo/solve/maxcut",
+        "valid": true
+      }
+    },
+    {
+      "command": "kissat sat_smoke_4.cnf",
+      "domain": "SAT",
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "python": "3.9.6"
+      },
+      "instance_id": "sat_smoke_4",
+      "instance_sha256": "5bc5b4ee7d602fe3014543a6c707d98dedf69a1ce1c7c23346d8bafa459fefbd",
+      "objective": 6,
+      "runtime_s": 0.362469833,
+      "seed": null,
+      "solver_id": "kissat",
+      "solver_version": "local-or-hosted",
+      "status": "optimal",
+      "suite_id": "sat_competition_main",
+      "timeout_s": 30.0,
+      "validator": {
+        "assignment": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "kind": "external_sat_assignment",
+        "returncode": 10,
+        "stdout_sha256": "db1552c1c7ac5aa65539433594d11feb0e45c8c0c1bf3ec93469121c70120a08",
+        "valid": true
+      }
+    },
+    {
+      "command": "cadical sat_smoke_4.cnf",
+      "domain": "SAT",
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "python": "3.9.6"
+      },
+      "instance_id": "sat_smoke_4",
+      "instance_sha256": "5bc5b4ee7d602fe3014543a6c707d98dedf69a1ce1c7c23346d8bafa459fefbd",
+      "objective": 6,
+      "runtime_s": 0.527510958,
+      "seed": null,
+      "solver_id": "cadical",
+      "solver_version": "local-or-hosted",
+      "status": "optimal",
+      "suite_id": "sat_competition_main",
+      "timeout_s": 30.0,
+      "validator": {
+        "assignment": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "kind": "external_sat_assignment",
+        "returncode": 10,
+        "stdout_sha256": "f1af62db9838e3e060b70dfa23ef878d54b9de33fdd08ad911d341b5d2a4b56a",
+        "valid": true
+      }
+    },
+    {
+      "command": "highs orlib_knapsack_12.lp",
+      "domain": "Knapsack",
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "python": "3.9.6"
+      },
+      "instance_id": "orlib_knapsack_12",
+      "instance_sha256": "7ad81dc82d0dac91e82facbca6bf20edd1f3ea3e2a90745c8d896546bfef1491",
+      "objective": 220.0,
+      "runtime_s": 0.116219125,
+      "seed": null,
+      "solver_id": "highs",
+      "solver_version": "local-or-hosted",
+      "status": "optimal",
+      "suite_id": "or_library_mknap",
+      "timeout_s": 30.0,
+      "validator": {
+        "kind": "external_mip_objective",
+        "returncode": 0,
+        "stdout_sha256": "9f7aac25f240af4bc180f3605c66eda03f5329192f1d7b065b7c0914f64adf8a",
+        "valid": true
+      }
+    },
+    {
+      "command": "scip orlib_knapsack_12.lp",
+      "domain": "Knapsack",
+      "hardware": {
+        "machine": "arm64",
+        "platform": "macOS-26.4-arm64-arm-64bit",
+        "python": "3.9.6"
+      },
+      "instance_id": "orlib_knapsack_12",
+      "instance_sha256": "7ad81dc82d0dac91e82facbca6bf20edd1f3ea3e2a90745c8d896546bfef1491",
+      "objective": 220.0,
+      "runtime_s": 0.695494375,
+      "seed": null,
+      "solver_id": "scip",
+      "solver_version": "local-or-hosted",
+      "status": "optimal",
+      "suite_id": "or_library_mknap",
+      "timeout_s": 30.0,
+      "validator": {
+        "kind": "external_mip_objective",
+        "returncode": 0,
+        "stdout_sha256": "4bac69f71a3cb23e325c57297a75fdf17028a8757f480f3b2925e4099d25c69d",
+        "valid": true
+      }
+    }
+  ],
+  "source_labels": {
+    "biq_mac": "Biq Mac Library",
+    "gurobi": "Gurobi Optimizer",
+    "highs": "HiGHS",
+    "maxsat_evaluation": "MaxSAT Evaluation",
+    "miplib": "MIPLIB",
+    "or_library": "OR-Library",
+    "qplib": "QPLIB",
+    "sat_competition": "SAT Competition",
+    "scip": "SCIP Optimization Suite",
+    "tsplib": "TSPLIB95"
+  },
+  "sources": {
+    "biq_mac": "https://biqmac.aau.at/biqmaclib.html",
+    "gurobi": "https://www.gurobi.com/solutions/",
+    "highs": "https://highs.dev/",
+    "maxsat_evaluation": "https://maxsat-evaluations.github.io/",
+    "miplib": "https://miplib.zib.de/",
+    "or_library": "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/mknapinfo.html",
+    "qplib": "https://qplib.zib.de/",
+    "sat_competition": "https://satcompetition.github.io/",
+    "scip": "https://scipopt.org/",
+    "tsplib": "https://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/index.html"
+  },
+  "summary": {
+    "external_solver_records": 4,
+    "external_solver_runs": 0,
+    "live_exact_matches": "0/2",
+    "live_heuristic_wins": "0/2",
+    "publishable_claims": 1,
+    "quantum_test_commands_passed": 2,
+    "quantum_test_commands_total": 2,
+    "records": 20,
+    "route_coverage": "6/6"
+  }
+}
