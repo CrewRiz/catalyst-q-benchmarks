@@ -6,13 +6,13 @@ It is not a formal complexity proof and does not disclose proprietary execution 
 ## Summary
 
 - API execution mode: live-api
-- Total cases: 21
+- Total cases: 24
 - Quantum cases: 12
-- Solver cases: 9
-- Public suites covered: 18
-- Successful API cases: 21
-- Median API latency ms: 75.485
-- Total compute units: 3536831632542
+- Solver cases: 12
+- Public suites covered: 19
+- Successful API cases: 24
+- Median API latency ms: 99.715
+- Total compute units: 3536939034542
 
 ## Cases
 
@@ -39,6 +39,9 @@ It is not a formal complexity proof and does not disclose proprietary execution 
 | supermarq_qaoa_10000 | SupermarQ & IBM Benchpress | QAOA | circuit | 10,000 qubits, 285,000 gates | 3020800000000 | 14038141 |
 | qchem_femoco_108 | Quantum Chemistry (VQE) | Hamiltonian Simulation | circuit | 108 qubits, 50,000 gates | 5564768256 | 2068774 |
 | shor_rsa_2048_surrogate | Cryptanalysis (Shor's) | Modular Exponentiation | circuit | 4,099 qubits, 100,000 gates | 445534672896 | 4262951 |
+| darpa_qbi_logistics_vrp_1000 | DARPA QBI (Utility Scale) | Vehicle Routing | solver | 1,000 nodes, 100 vehicles | 100000000 | 5977562 |
+| darpa_qbi_power_grid_2000 | DARPA QBI (Utility Scale) | Unit Commitment | solver | 2,000 generators, 24 periods | 1152000 | 35067 |
+| darpa_qbi_finance_2500 | DARPA QBI (Utility Scale) | Portfolio Optimization | solver | 2,500 assets | 6250000 | 37532593 |
 
 ## Sources
 

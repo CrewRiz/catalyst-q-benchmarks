@@ -12,7 +12,7 @@
       "family": "Bernstein-Vazirani",
       "id": "qedc_bernstein_vazirani_8",
       "payload_bytes": 1778,
-      "prepare_time_us": 467.625,
+      "prepare_time_us": 434.125,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -36,7 +36,7 @@
       "family": "GHZ",
       "id": "supermarq_ghz_16",
       "payload_bytes": 2060,
-      "prepare_time_us": 30.291,
+      "prepare_time_us": 25.917,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -60,7 +60,7 @@
       "family": "QAOA ring",
       "id": "supermarq_qaoa_ring_8",
       "payload_bytes": 2781,
-      "prepare_time_us": 36.292,
+      "prepare_time_us": 68.959,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -84,7 +84,7 @@
       "family": "QFT",
       "id": "qasmbench_qft_5_qasm",
       "payload_bytes": 1430,
-      "prepare_time_us": 140.583,
+      "prepare_time_us": 145.333,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -108,7 +108,7 @@
       "family": "Grover",
       "id": "mqtbench_grover_6",
       "payload_bytes": 2107,
-      "prepare_time_us": 31.916,
+      "prepare_time_us": 34.208,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -130,7 +130,7 @@
       "family": "Random 3-SAT",
       "id": "satlib_random_3sat_20",
       "payload_bytes": 1737,
-      "prepare_time_us": 69.333,
+      "prepare_time_us": 41.125,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -152,7 +152,7 @@
       "family": "Euclidean TSP",
       "id": "tsplib_euclidean_10",
       "payload_bytes": 1166,
-      "prepare_time_us": 45.791,
+      "prepare_time_us": 33.792,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -174,7 +174,7 @@
       "family": "0/1 knapsack",
       "id": "orlib_mknap_12",
       "payload_bytes": 883,
-      "prepare_time_us": 14.75,
+      "prepare_time_us": 10.375,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -196,7 +196,7 @@
       "family": "Cardinality-constrained portfolio",
       "id": "orlib_portfolio_8",
       "payload_bytes": 1432,
-      "prepare_time_us": 40.708,
+      "prepare_time_us": 34.333,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -218,7 +218,7 @@
       "family": "Binary quadratic optimization",
       "id": "biqmac_qubo_6",
       "payload_bytes": 985,
-      "prepare_time_us": 12.5,
+      "prepare_time_us": 10.625,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -240,7 +240,7 @@
       "family": "Max-Cut",
       "id": "biqmac_maxcut_6",
       "payload_bytes": 1049,
-      "prepare_time_us": 15.25,
+      "prepare_time_us": 16.0,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -262,7 +262,7 @@
       "family": "DAG Optimization",
       "id": "cafa6_dag_optimization_12",
       "payload_bytes": 1494,
-      "prepare_time_us": 28.625,
+      "prepare_time_us": 20.458,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -286,7 +286,7 @@
       "family": "Adder",
       "id": "cafa6_full_adder_4",
       "payload_bytes": 1197,
-      "prepare_time_us": 22.25,
+      "prepare_time_us": 15.166,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -310,7 +310,7 @@
       "family": "Loschmidt Echo",
       "id": "google_echo_8",
       "payload_bytes": 2651,
-      "prepare_time_us": 38.292,
+      "prepare_time_us": 31.417,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -332,7 +332,7 @@
       "family": "Random 3-SAT",
       "id": "sat_competition_100",
       "payload_bytes": 5732,
-      "prepare_time_us": 1140.0,
+      "prepare_time_us": 904.916,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -354,7 +354,7 @@
       "family": "Integer Linear Programming",
       "id": "miplib_mknap_100",
       "payload_bytes": 2427,
-      "prepare_time_us": 431.083,
+      "prepare_time_us": 335.417,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -378,7 +378,7 @@
       "family": "Quantum Fourier Transform",
       "id": "qasmbench_qft_500",
       "payload_bytes": 8903542,
-      "prepare_time_us": 139427.042,
+      "prepare_time_us": 122089.541,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -402,7 +402,7 @@
       "family": "Hamiltonian Simulation",
       "id": "benchpress_tfim_100",
       "payload_bytes": 186960,
-      "prepare_time_us": 11138.208,
+      "prepare_time_us": 10142.041,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -426,7 +426,7 @@
       "family": "QAOA",
       "id": "supermarq_qaoa_10000",
       "payload_bytes": 14038141,
-      "prepare_time_us": 173390.958,
+      "prepare_time_us": 147023.584,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -450,7 +450,7 @@
       "family": "Hamiltonian Simulation",
       "id": "qchem_femoco_108",
       "payload_bytes": 2068774,
-      "prepare_time_us": 42200.25,
+      "prepare_time_us": 39807.083,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -470,11 +470,11 @@
         "qubits": 4099,
         "shots": 1024
       },
-      "description": "Massive Modular Multiplier block from a 2048-bit Shor's algorithm circuit.",
+      "description": "Surrogate scaling proof: Massive Modular Multiplier block from a 2048-bit Shor's algorithm circuit. (Not a full factorization).",
       "family": "Modular Exponentiation",
       "id": "shor_rsa_2048_surrogate",
       "payload_bytes": 4262951,
-      "prepare_time_us": 86026.666,
+      "prepare_time_us": 77747.417,
       "prepared_request": {
         "anonymous_install": true,
         "method": "POST",
@@ -485,6 +485,72 @@
       "source_url": "https://arxiv.org/abs/quant-ph/0205095",
       "suite": "Cryptanalysis (Shor's)",
       "workload_type": "circuit"
+    },
+    {
+      "billing_estimate": {
+        "compute_units": 100000000,
+        "problem_size": 1000,
+        "solver_runs": 1
+      },
+      "description": "Utility-scale Capacitated Vehicle Routing Problem for global supply chain optimization.",
+      "family": "Vehicle Routing",
+      "id": "darpa_qbi_logistics_vrp_1000",
+      "payload_bytes": 5977562,
+      "prepare_time_us": 88811.416,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/solve/vrp",
+        "url": "https://api.strategic-innovations.ai/v3turbo/solve/vrp"
+      },
+      "size_label": "1,000 nodes, 100 vehicles",
+      "source_url": "https://www.darpa.mil/program/quantum-benchmarking",
+      "suite": "DARPA QBI (Utility Scale)",
+      "workload_type": "solver"
+    },
+    {
+      "billing_estimate": {
+        "compute_units": 1152000,
+        "problem_size": 48000,
+        "solver_runs": 1
+      },
+      "description": "Utility-scale Unit Commitment matching massive power generation capacity to grid load.",
+      "family": "Unit Commitment",
+      "id": "darpa_qbi_power_grid_2000",
+      "payload_bytes": 35067,
+      "prepare_time_us": 5042.791,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/solve/unit_commitment",
+        "url": "https://api.strategic-innovations.ai/v3turbo/solve/unit_commitment"
+      },
+      "size_label": "2,000 generators, 24 periods",
+      "source_url": "https://www.darpa.mil/program/quantum-benchmarking",
+      "suite": "DARPA QBI (Utility Scale)",
+      "workload_type": "solver"
+    },
+    {
+      "billing_estimate": {
+        "compute_units": 25000000,
+        "problem_size": 5000,
+        "solver_runs": 1
+      },
+      "description": "Utility-scale Markowitz Portfolio Optimization with a completely dense 5000x5000 covariance risk matrix.",
+      "family": "Portfolio Optimization",
+      "id": "darpa_qbi_finance_5000",
+      "payload_bytes": 150057128,
+      "prepare_time_us": 801895.167,
+      "prepared_request": {
+        "anonymous_install": true,
+        "method": "POST",
+        "route": "/v3turbo/solve/portfolio",
+        "url": "https://api.strategic-innovations.ai/v3turbo/solve/portfolio"
+      },
+      "size_label": "5,000 assets",
+      "source_url": "https://www.darpa.mil/program/quantum-benchmarking",
+      "suite": "DARPA QBI (Utility Scale)",
+      "workload_type": "solver"
     }
   ],
   "disclaimer": "Public harness results validate SDK request generation and billing estimates; they are not a formal complexity proof.",
@@ -506,14 +572,15 @@
   "summary": {
     "max_qubits": 10000,
     "quantum_cases": 12,
-    "solver_cases": 9,
-    "suite_count": 18,
+    "solver_cases": 12,
+    "suite_count": 19,
     "suites": [
       "Biq Mac Library",
       "Catalyst Arithmetic",
       "Catalyst Biocomputation",
       "Catalyst Sampling",
       "Cryptanalysis (Shor's)",
+      "DARPA QBI (Utility Scale)",
       "MIPLIB 2017",
       "MQT Bench",
       "OR-Library Knapsack",
@@ -528,8 +595,8 @@
       "SupermarQ & IBM Benchpress",
       "TSPLIB"
     ],
-    "total_cases": 21,
-    "total_compute_units": 3536831632542,
-    "total_payload_bytes": 29491277
+    "total_cases": 24,
+    "total_compute_units": 3536957784542,
+    "total_payload_bytes": 185561034
   }
 }
