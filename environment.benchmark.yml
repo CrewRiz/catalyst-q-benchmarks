@@ -1,0 +1,16 @@
+name: catalyst-q-benchmark
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - cmake
+  - pkg-config
+  - highs
+  - scip
+  - glpk
+  - coin-or-cbc
+  - cadical
+  - pip:
+      - -e .
+      - -r requirements/benchmark-remote.txt

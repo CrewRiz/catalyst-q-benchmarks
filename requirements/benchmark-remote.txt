@@ -1,0 +1,29 @@
+# Remote benchmark runner dependencies.
+#
+# Install this only on CI, Cloudflare Containers, or a rented runner with enough
+# disk/RAM. Do not use this profile on a storage-constrained laptop unless you
+# are deliberately reproducing the full external campaign locally.
+-r benchmark-core.txt
+
+scipy>=1.12
+pyarrow>=16.0
+ortools>=9.10
+python-sat[pblib,aiger]>=1.8.dev0
+tsplib95>=0.7
+vrplib>=1.5
+pulp>=2.9
+mip>=1.15
+highspy>=1.7
+cvxpy>=1.5
+qpsolvers>=4.3
+dimod>=0.12
+dwave-neal>=0.6
+dwave-samplers>=1.3
+qiskit>=1.2
+qiskit-aer>=0.15
+qiskit-optimization>=0.6
+
+# Optional commercial/cloud baselines. Runtime access may require credentials,
+# licenses, or cloud account configuration.
+gurobipy>=11.0
+dwave-system>=1.25

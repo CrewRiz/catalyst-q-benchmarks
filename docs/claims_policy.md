@@ -13,6 +13,7 @@ This repository is evidence infrastructure. It must not overstate Catalyst-Q cap
 - "Catalyst-Q achieved X objective on Y instance under Z budget."
 - "Catalyst-Q beat baseline B on metric M for suite S under protocol P."
 - "Catalyst-Q had the lowest cost per validated solution on this named subset."
+- "Catalyst-Q live SDK/API matched exact reference objectives on the bundled QUBO and Max-Cut smoke instances."
 
 ## Not Allowed
 
@@ -21,4 +22,3 @@ This repository is evidence infrastructure. It must not overstate Catalyst-Q cap
 - Complexity breakthrough claims in public benchmark copy.
 - Any discussion of private execution internals or internal state-space mechanics.
 - Any chart whose source data is not committed or linked as raw artifacts.
-

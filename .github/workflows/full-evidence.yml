@@ -1,0 +1,106 @@
+name: Catalyst-Q full evidence
+
+on:
+  workflow_dispatch:
+    inputs:
+      execute_api:
+        description: "Execute live Catalyst-Q API checks"
+        required: true
+        default: "true"
+        type: choice
+        options: ["true", "false"]
+      run_external:
+        description: "Run installed external solver smoke checks"
+        required: true
+        default: "true"
+        type: choice
+        options: ["true", "false"]
+      run_quantum_tests:
+        description: "Run monorepo quantum simulator test commands"
+        required: true
+        default: "false"
+        type: choice
+        options: ["true", "false"]
+  schedule:
+    - cron: "17 7 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      EXECUTE_API: ${{ github.event_name == 'schedule' && 'true' || inputs.execute_api }}
+      RUN_EXTERNAL: ${{ github.event_name == 'schedule' && 'true' || inputs.run_external }}
+      RUN_QUANTUM_TESTS: ${{ github.event_name == 'schedule' && 'false' || inputs.run_quantum_tests }}
+      HAS_CF_R2_CONFIG: ${{ secrets.CLOUDFLARE_API_TOKEN != '' && secrets.CLOUDFLARE_ACCOUNT_ID != '' && vars.CATALYST_Q_R2_BUCKET != '' }}
+
+    steps:
+      - name: Check out benchmark repository
+        uses: actions/checkout@v4
+
+      - name: Set up conda benchmark environment
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          miniforge-version: latest
+          activate-environment: catalyst-q-benchmark
+          environment-file: environment.benchmark.yml
+          auto-activate-base: false
+
+      - name: Verify Python package graph
+        shell: bash -el {0}
+        run: |
+          python -m pip check
+          python -m pytest tests -q
+
+      - name: Build evidence package
+        shell: bash -el {0}
+        env:
+          CATALYST_Q_API_KEY: ${{ secrets.CATALYST_Q_API_KEY }}
+        run: |
+          FLAGS=(--output-dir results)
+          if [ "$EXECUTE_API" = "true" ]; then
+            FLAGS+=(--execute-api)
+          fi
+          if [ "$RUN_EXTERNAL" = "true" ]; then
+            FLAGS+=(--run-external)
+          fi
+          if [ "$RUN_QUANTUM_TESTS" = "true" ]; then
+            FLAGS+=(--run-quantum-tests --monorepo-root .)
+          fi
+          python scripts/build_full_evidence_package.py "${FLAGS[@]}"
+
+      - name: Upload GitHub evidence artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: catalyst-q-full-evidence
+          path: |
+            results/full_evidence_package.json
+            results/full_evidence_package.md
+            results/full_evidence_scorecard.svg
+            results/raw/**/*.jsonl
+          if-no-files-found: warn
+
+      - name: Publish evidence artifacts to Cloudflare R2
+        if: ${{ env.HAS_CF_R2_CONFIG == 'true' }}
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: >
+            r2 object put
+            ${{ vars.CATALYST_Q_R2_BUCKET }}/public-evidence/latest/full_evidence_package.json
+            --file results/full_evidence_package.json
+
+      - name: Publish scorecard to Cloudflare R2
+        if: ${{ env.HAS_CF_R2_CONFIG == 'true' }}
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: >
+            r2 object put
+            ${{ vars.CATALYST_Q_R2_BUCKET }}/public-evidence/latest/full_evidence_scorecard.svg
+            --file results/full_evidence_scorecard.svg
