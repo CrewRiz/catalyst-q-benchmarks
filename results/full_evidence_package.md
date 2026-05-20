@@ -5,10 +5,10 @@ No broad NP or SOTA claim is made. Claims are limited to named artifacts and val
 ## Summary
 
 - Route coverage: 6/7
-- Live exact matches: 0/2
-- Live heuristic wins: 0/2
+- Live exact matches: 2/2
+- Live heuristic wins: 2/2
 - Records: 17
-- Publishable claims: 2
+- Publishable claims: 5
 - External solver records: 0
 - Quantum test commands passed: 0/0
 - High-qubit exact cases: 11/11
@@ -19,9 +19,9 @@ No broad NP or SOTA claim is made. Claims are limited to named artifacts and val
 | Claim | Status | Evidence |
 |---|---|---|
 | Catalyst-Q SDK exposes all seven public NP helper routes: SAT, TSP, knapsack/MKP, portfolio, QUBO, Max-Cut, and DAG Optimization. | publishable | SDK prepared-request records with route validators. |
-| Catalyst-Q live SDK/API matches the exact QUBO reference objective -4.0 on the bundled smoke instance. | blocked-until-live-api-run | Raw record validator.matches_reference for QUBO. |
-| Catalyst-Q live SDK/API matches the exact Max-Cut reference objective 9.0 on the bundled smoke instance. | blocked-until-live-api-run | Raw record validator.matches_reference for Max-Cut. |
-| Catalyst-Q live SDK/API beats the included greedy heuristic baselines on the bundled QUBO and Max-Cut smoke instances. | blocked-until-live-api-run | QUBO is lower-is-better and Max-Cut is higher-is-better against local heuristic baseline records. |
+| Catalyst-Q live SDK/API matches the exact QUBO reference objective -4.0 on the bundled smoke instance. | publishable | Raw record validator.matches_reference for QUBO. |
+| Catalyst-Q live SDK/API matches the exact Max-Cut reference objective 9.0 on the bundled smoke instance. | publishable | Raw record validator.matches_reference for Max-Cut. |
+| Catalyst-Q live SDK/API beats the included greedy heuristic baselines on the bundled QUBO and Max-Cut smoke instances. | publishable | QUBO is lower-is-better and Max-Cut is higher-is-better against local heuristic baseline records. |
 | Catalyst-Q compact execution validates exact targeted answers with zero dense state materialization across 11 high-qubit benchmark cases up to 4096 qubits. | publishable | High-qubit exactness artifact summary and per-case validator rows. |
 | Catalyst-Q is broadly best-in-class against commercial and academic SOTA solvers. | not-yet-supported | Requires full Biq Mac/Gset/QPLIB/TSPLIB/SAT/MaxSAT campaigns against external baselines. |
 
@@ -43,8 +43,8 @@ No broad NP or SOTA claim is made. Claims are limited to named artifacts and val
 | tsplib_style_8 | TSP | catalyst-q-sdk-request | unknown |  |
 | orlib_knapsack_12 | Knapsack | catalyst-q-sdk-request | unknown |  |
 | portfolio_smoke_8 | Portfolio | catalyst-q-sdk-request | unknown |  |
-| biqmac_qubo_6 | QUBO | catalyst-q-sdk-request | unknown |  |
-| biqmac_maxcut_6 | Max-Cut | catalyst-q-sdk-request | unknown |  |
+| biqmac_qubo_6 | QUBO | catalyst-q-sdk-live | optimal | -4.0 |
+| biqmac_maxcut_6 | Max-Cut | catalyst-q-sdk-live | optimal | 9.0 |
 | cafa6_dag_optimization_12 | DAG Optimization | catalyst-q-sdk-request | unknown |  |
 
 ## High-Qubit Exactness Evidence

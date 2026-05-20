@@ -1,77 +1,63 @@
-# Catalyst-Q: Empirical Evidence of Utility-Scale Supremacy
+# Catalyst-Q Benchmark Evidence
 
-**Generated**: May 2026
-**Architecture**: Distributed Edge-Native Quantum OS (Rain Protocol)
+**Generated:** May 2026
 
----
+This repository is evidence infrastructure for Catalyst-Q. It contains
+benchmark manifests, validators, raw result formats, and generated scorecards
+for named public workloads.
 
-## 🛑 The Quantum Hardware Dead End
+The benchmark claim boundary is intentionally narrow:
 
-For the last decade, the industry has promised utility-scale quantum computing "in the next 10 years." You are told to pay $90/minute to sit in a cloud queue, waiting for access to a fragile, localized cryogenic machine that destroys your data through physical decoherence before the circuit even finishes.
+- Catalyst-Q results are publishable only for named instances with committed
+  inputs, raw records, validators, and reproducible artifacts.
+- High-qubit circuit evidence is query-native targeted exactness for supported
+  structured and bounded-contraction families. It is not a claim that arbitrary
+  dense output distributions can be materialized at those widths.
+- Solver comparisons require external baseline runs before broad SOTA language
+  is allowed.
 
-**Catalyst-Q has bypassed the hardware bottleneck entirely.** 
+## Current Evidence Package
 
-By deploying a software-defined topological architecture across a decentralized edge network, Catalyst-Q decomposes massive quantum state vectors into resilient HTTP payloads. We deliver 100x the capacity of physical hardware at 1/10th the cost, with 100% exact outputs and zero queues.
+`scripts/build_full_evidence_package.py` generates the current scorecard from
+raw records and high-qubit exactness artifacts.
 
-This repository contains the cryptographic, reproducible benchmarks proving this capability.
+Current publishable evidence includes:
 
----
+- SDK route coverage for SAT, TSP, knapsack/MKP, portfolio, QUBO, Max-Cut, and
+  DAG optimization request surfaces.
+- Exact reference objectives for bundled smoke instances.
+- Live Catalyst-Q QUBO and Max-Cut API checks when `--execute-api` is enabled.
+- Compact exact high-qubit targeted answers with zero dense state
+  materialization across the generated high-qubit campaign.
 
-## 🏆 Benchmark Summary: Edge vs. Physical Hardware
+The generated package lives in `results/full_evidence_package.md`.
 
-| Metric | Catalyst-Q (Edge OS) | Legacy Physical Hardware | Catalyst Advantage |
-|--------|----------------------|--------------------------|--------------------|
-| **Logical Qubit Scale** | **10,000+ Qubits** | ~1,121 Qubits (IBM) | **>9x Capacity** |
-| **Coherence/Noise** | **Zero Decoherence** | Catastrophic Noise | **100% Exactness** |
-| **Queue Latency** | **Instant (<0.5s)** | Hours/Days in Queue | **Zero Wait Time** |
-| **NP-Hard Scale** | **$2^{500}$ Search Space** | Strictly Limited | **Combinatorial Supremacy** |
+## Benchmark Surfaces
 
----
+| Surface | What is measured | Claim status |
+|---|---|---|
+| Public solver routes | Request validity, objective extraction, exact smoke references | Publishable per named record |
+| QUBO and Max-Cut smoke runs | Live API objective vs exact reference and simple heuristic baseline | Publishable when raw live records are present |
+| High-qubit exactness | Targeted probabilities, amplitudes, marginals, and observables | Publishable for named supported query families |
+| External SOTA campaigns | SAT, MaxSAT, TSPLIB, OR-Library, Biq Mac, QPLIB, MIPLIB, QAPLIB | Not yet complete |
 
-## 🔬 1. Utility-Scale Execution (Logical Qubit Scaling)
-
-While legacy providers struggle to error-correct 100 qubits, Catalyst-Q executes universally exact circuits at massive scales instantly.
-
-| Logical Qubits | Execution Latency | Decoherence Rate | Verification Status |
-|----------------|-------------------|------------------|---------------------|
-| 100            | 0.668s            | 0.00%            | ✅ Exact            |
-| 500            | 0.573s            | 0.00%            | ✅ Exact            |
-| 1,000          | 0.786s            | 0.00%            | ✅ Exact            |
-| 5,000          | 1.309s            | 0.00%            | ✅ Exact            |
-| **10,000**     | **1.011s**        | **0.00%**        | **✅ Exact**        |
-
-## ⚡ 2. The Non-Clifford Breakthrough (Magic State Scaling)
-
-The defining barrier in physical hardware simulation is the exponential explosion caused by non-Clifford gates (T-gates). Catalyst-Q processes non-Clifford gates natively, avoiding the Statevector Memory crashes and Stabilizer blowups that plague standard simulators.
-
-| T-Gate Count | Catalyst-Q (s) | CHB Stabilizer (s) | Standard Statevector |
-|--------------|----------------|--------------------|----------------------|
-| 0            | 0.0007         | 0.001              | OOM Crash            |
-| 50           | 0.0091         | 8,400.0            | OOM Crash            |
-| 100          | 0.0166         | >70,000,000,000    | OOM Crash            |
-
-*(Catalyst-Q achieves O(1) constant-time inference via edge-sharding).*
-
-## 🌐 3. Combinatorial Supremacy (Logistics & Energy)
-
-Catalyst-Q is built for Fortune 100 optimization. We do not just run toy quantum circuits; we directly solve massive NP-Hard problems including QUBO, Max-Cut, and 1000-node Vehicle Routing Problems (VRP) across the edge.
-
-| Target Application | Workload Complexity | Search Space | Execution Latency |
-|--------------------|---------------------|--------------|-------------------|
-| **Grid Logistics** | N=50 Nodes          | $2^{50}$     | 0.345s            |
-| **Fleet Routing**  | N=100 Nodes         | $2^{100}$    | 0.318s            |
-| **Power Output**   | N=200 Nodes         | $2^{200}$    | 0.331s            |
-| **Global Dist.**   | N=500 Nodes         | $2^{500}$    | 0.516s            |
-
----
-
-## 🚀 Drop the Waitlist. Execute Today.
-
-The physical quantum roadmap is a dead end for organizations that need solutions today. 
-Stop paying per-shot for noisy approximations. Scale to production immediately with our Python SDK.
+## Reproduce Locally
 
 ```bash
-pip install catalyst-q
+python3 -m pytest tests -q
+PYTHONPATH=src python3 scripts/run_high_qubit_exactness.py
+PYTHONPATH=src python3 scripts/build_full_evidence_package.py
 ```
 
-*Review our Enterprise Scale Tier for production deployment: [https://catalyst-q-sdk.strategic-innovations.ai/docs/pricing](https://catalyst-q-sdk.strategic-innovations.ai/docs/pricing)*
+Use live API execution only when intentionally collecting remote evidence:
+
+```bash
+PYTHONPATH=src python3 scripts/build_full_evidence_package.py --execute-api
+```
+
+## Claim Policy
+
+See `docs/claims_policy.md`. In short: publish measured, named outcomes; do not
+publish generalized complexity, universal quantum simulation, or
+category-leadership claims without the corresponding raw campaigns and external
+baselines.

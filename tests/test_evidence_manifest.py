@@ -53,6 +53,26 @@ def test_readiness_report_is_careful_about_claims():
     assert "solves NP" not in report
 
 
+def test_front_page_respects_claim_boundary():
+    readme = (ROOT / "README.md").read_text(encoding="utf-8").lower()
+    normalized = " ".join(readme.split())
+    forbidden_terms = [
+        "quantum state vector",
+        "state vectors into",
+        "100% exact outputs",
+        "zero queues",
+        "combinatorial supremacy",
+        "universally exact circuits",
+        "broad np",
+        "best-in-class",
+    ]
+
+    assert "query-native targeted exactness" in normalized
+    assert "not a claim that arbitrary dense output distributions can be materialized" in normalized
+    for term in forbidden_terms:
+        assert term not in normalized
+
+
 def test_svg_chart_is_generated_from_manifest():
     svg = build_readiness_svg()
 
@@ -90,4 +110,3 @@ def test_tsp_tour_validator():
     assert valid is False
     assert "tour contains duplicate nodes" in errors
     assert "tour contains node id outside expected range" in errors
-

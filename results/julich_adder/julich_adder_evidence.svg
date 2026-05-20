@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="364" viewBox="0 0 980 364">
+<rect width="100%" height="100%" fill="#f8faf9"/>
+<text x="28" y="36" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#151716">Catalyst-Q Jülich Adder Evidence</text>
+<text x="28" y="62" font-family="Arial, sans-serif" font-size="13" fill="#5f6862">Targeted adder output certificates with zero dense materialization.</text>
+<text x="28" y="111" font-family="Arial, sans-serif" font-size="12" fill="#151716">julich_adder_25x25</text>
+<rect x="310" y="96" width="25" height="18" rx="3" fill="#0f6b57"/>
+<text x="345" y="110" font-family="Arial, sans-serif" font-size="12" fill="#151716">50q</text>
+<text x="850" y="110" font-family="Arial, sans-serif" font-size="12" fill="#151716">0 states</text>
+<text x="28" y="153" font-family="Arial, sans-serif" font-size="12" fill="#151716">adder_ladder_32x32</text>
+<rect x="310" y="138" width="32" height="18" rx="3" fill="#0f6b57"/>
+<text x="352" y="152" font-family="Arial, sans-serif" font-size="12" fill="#151716">64q</text>
+<text x="850" y="152" font-family="Arial, sans-serif" font-size="12" fill="#151716">0 states</text>
+<text x="28" y="195" font-family="Arial, sans-serif" font-size="12" fill="#151716">adder_ladder_64x64</text>
+<rect x="310" y="180" width="65" height="18" rx="3" fill="#0f6b57"/>
+<text x="385" y="194" font-family="Arial, sans-serif" font-size="12" fill="#151716">128q</text>
+<text x="850" y="194" font-family="Arial, sans-serif" font-size="12" fill="#151716">0 states</text>
+<text x="28" y="237" font-family="Arial, sans-serif" font-size="12" fill="#151716">adder_ladder_128x128</text>
+<rect x="310" y="222" width="130" height="18" rx="3" fill="#0f6b57"/>
+<text x="450" y="236" font-family="Arial, sans-serif" font-size="12" fill="#151716">256q</text>
+<text x="850" y="236" font-family="Arial, sans-serif" font-size="12" fill="#151716">0 states</text>
+<text x="28" y="279" font-family="Arial, sans-serif" font-size="12" fill="#151716">adder_ladder_256x256</text>
+<rect x="310" y="264" width="260" height="18" rx="3" fill="#0f6b57"/>
+<text x="580" y="278" font-family="Arial, sans-serif" font-size="12" fill="#151716">512q</text>
+<text x="850" y="278" font-family="Arial, sans-serif" font-size="12" fill="#151716">0 states</text>
+<text x="28" y="321" font-family="Arial, sans-serif" font-size="12" fill="#151716">adder_ladder_512x512</text>
+<rect x="310" y="306" width="520" height="18" rx="3" fill="#0f6b57"/>
+<text x="840" y="320" font-family="Arial, sans-serif" font-size="12" fill="#151716">1024q</text>
+<text x="850" y="320" font-family="Arial, sans-serif" font-size="12" fill="#151716">0 states</text>
+</svg>
