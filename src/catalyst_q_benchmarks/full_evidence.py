@@ -15,6 +15,7 @@ from itertools import permutations
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Sequence, Tuple
 
+from .qml_tracks import QML_TRACKS
 from .sdk_campaign import exact_maxcut, exact_qubo
 
 PUBLIC_SOURCES = {
@@ -319,6 +320,7 @@ def _package(records: List[Dict[str, Any]], execute_api: bool, high_qubit_eviden
         },
         "records": records,
         "claims": claims,
+        "qml_evidence_tracks": QML_TRACKS,
         "external_baselines": _external_baselines(),
         "disclaimer": "No broad NP or SOTA claim is made. Claims are limited to named artifacts and validators.",
     }
@@ -582,6 +584,9 @@ def _render_markdown(package: Dict[str, Any]) -> str:
     ]
     for claim in package["claims"]:
         lines.append(f"| {claim['claim']} | {claim['status']} | {claim['evidence']} |")
+    lines.extend(["", "## QML Evidence Tracks", "", "| Track | Buyer Value | Claim Boundary |", "|---|---|---|"])
+    for track in package.get("qml_evidence_tracks", []):
+        lines.append(f"| {track['title']} | {track['buyer_value']} | {track['claim_boundary']} |")
     lines.extend(["", "## Results", "", "| Instance | Domain | Solver | Status | Objective |", "|---|---|---|---:|---:|"])
     for record in package["records"]:
         objective = "" if record["objective"] is None else record["objective"]

@@ -106,3 +106,34 @@ def test_full_evidence_extracts_demo_wrapped_and_worker_top_level_objectives():
     assert _extract_api_objective("QUBO", {"json": {"objective": -4}}) == -4.0
     assert _extract_api_objective("Max-Cut", {"json": {"result": {"cut_value": 9}}}) == 9.0
     assert _extract_api_objective("Max-Cut", {"json": {"cut_value": 9}}) == 9.0
+
+
+def test_full_evidence_package_includes_qml_tracks_without_broad_claims(tmp_path, monkeypatch):
+    monkeypatch.setenv("CATALYST_Q_HOME", str(tmp_path / "catalyst-q-home"))
+
+    artifacts = build_full_evidence_package(
+        output_dir=tmp_path,
+        sdk_path=MONOREPO_ROOT / "sdk" / "python",
+        execute_api=False,
+    )
+
+    data = json.loads(pathlib.Path(artifacts["json"]).read_text())
+    markdown = pathlib.Path(artifacts["markdown"]).read_text()
+
+    qml_tracks = data["qml_evidence_tracks"]
+    assert {track["id"] for track in qml_tracks} == {
+        "quantum_oracle_sketching",
+        "feature_encoding_workbench",
+        "trainability_reservoir",
+    }
+    assert "QML Evidence Tracks" in markdown
+
+    serialized = json.dumps(qml_tracks).lower()
+    blocked_phrases = [
+        "universal quantum advantage",
+        "guaranteed superiority",
+        "arbitrary dense output",
+    ]
+
+    for phrase in blocked_phrases:
+        assert phrase not in serialized
