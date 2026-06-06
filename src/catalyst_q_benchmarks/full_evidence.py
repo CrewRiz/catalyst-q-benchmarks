@@ -299,6 +299,7 @@ def _package(records: List[Dict[str, Any]], execute_api: bool, high_qubit_eviden
     coverage = {record["validator"].get("route") for record in records if record["solver_id"].startswith("catalyst-q-sdk")}
     high_qubit_summary = high_qubit_evidence.get("summary", {}) if high_qubit_evidence.get("available") else {}
     claims = _claim_ledger(records, heuristic_wins, high_qubit_evidence)
+    qml_tracks = _qml_evidence_tracks()
     return {
         "package": "catalyst-q-full-evidence",
         "generated_at": "deterministic-local" if not execute_api else "live-api-run",
@@ -320,10 +321,18 @@ def _package(records: List[Dict[str, Any]], execute_api: bool, high_qubit_eviden
         },
         "records": records,
         "claims": claims,
-        "qml_evidence_tracks": QML_TRACKS,
+        "claim_ledger": {
+            "claims": claims,
+            "qml_evidence_tracks": qml_tracks,
+        },
+        "qml_evidence_tracks": qml_tracks,
         "external_baselines": _external_baselines(),
         "disclaimer": "No broad NP or SOTA claim is made. Claims are limited to named artifacts and validators.",
     }
+
+
+def _qml_evidence_tracks() -> List[Dict[str, str]]:
+    return [dict(track) for track in QML_TRACKS]
 
 
 def _claim_ledger(records: List[Dict[str, Any]], heuristic_wins: int, high_qubit_evidence: Dict[str, Any]) -> List[Dict[str, str]]:
@@ -585,7 +594,8 @@ def _render_markdown(package: Dict[str, Any]) -> str:
     for claim in package["claims"]:
         lines.append(f"| {claim['claim']} | {claim['status']} | {claim['evidence']} |")
     lines.extend(["", "## QML Evidence Tracks", "", "| Track | Buyer Value | Claim Boundary |", "|---|---|---|"])
-    for track in package.get("qml_evidence_tracks", []):
+    qml_tracks = package.get("claim_ledger", {}).get("qml_evidence_tracks", package.get("qml_evidence_tracks", []))
+    for track in qml_tracks:
         lines.append(f"| {track['title']} | {track['buyer_value']} | {track['claim_boundary']} |")
     lines.extend(["", "## Results", "", "| Instance | Domain | Solver | Status | Objective |", "|---|---|---|---:|---:|"])
     for record in package["records"]:

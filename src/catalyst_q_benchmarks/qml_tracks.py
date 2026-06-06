@@ -1,4 +1,17 @@
-QML_TRACKS = [
+from __future__ import annotations
+
+from typing import Final, Tuple, TypedDict
+
+
+class QMLEvidenceTrack(TypedDict):
+    id: str
+    title: str
+    buyer_value: str
+    primary_artifacts: str
+    claim_boundary: str
+
+
+QML_TRACKS: Final[Tuple[QMLEvidenceTrack, ...]] = (
     {
         "id": "quantum_oracle_sketching",
         "title": "Quantum Oracle Sketching",
@@ -45,4 +58,4 @@ QML_TRACKS = [
             "Treat trainability as task-specific evidence, not a universal performance claim."
         ),
     },
-]
+)

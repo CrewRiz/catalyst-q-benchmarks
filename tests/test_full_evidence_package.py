@@ -120,12 +120,13 @@ def test_full_evidence_package_includes_qml_tracks_without_broad_claims(tmp_path
     data = json.loads(pathlib.Path(artifacts["json"]).read_text())
     markdown = pathlib.Path(artifacts["markdown"]).read_text()
 
-    qml_tracks = data["qml_evidence_tracks"]
+    qml_tracks = data["claim_ledger"]["qml_evidence_tracks"]
     assert {track["id"] for track in qml_tracks} == {
         "quantum_oracle_sketching",
         "feature_encoding_workbench",
         "trainability_reservoir",
     }
+    assert data["qml_evidence_tracks"] == qml_tracks
     assert "QML Evidence Tracks" in markdown
 
     serialized = json.dumps(qml_tracks).lower()
