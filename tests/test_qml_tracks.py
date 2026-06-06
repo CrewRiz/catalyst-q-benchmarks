@@ -38,6 +38,7 @@ def test_qml_track_ids_are_unique():
 def test_qml_track_public_copy_avoids_private_architecture_terms():
     blocked_terms = [
         "geodesic",
+        "geodesic oracle",
         "hmk",
         "mathematically exact",
         "trade secret",
@@ -79,6 +80,7 @@ def test_qml_evidence_doc_avoids_private_architecture_terms():
     text = QML_DOC.read_text(encoding="utf-8").lower()
     blocked_terms = [
         "geodesic",
+        "geodesic oracle",
         "hmk",
         "mathematically exact",
         "trade secret",

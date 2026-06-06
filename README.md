@@ -16,12 +16,16 @@ The benchmark claim boundary is intentionally narrow:
 - Solver comparisons require external baseline runs before broad SOTA language
   is allowed.
 
-## Current Evidence Package
+## Generated Evidence Package
 
 `scripts/build_full_evidence_package.py` generates the current scorecard from
 raw records and high-qubit exactness artifacts.
 
-Current publishable evidence includes:
+Checked-in files under `results/` are generated snapshots. Regenerate the
+package before publishing fresh claims or assuming it reflects uncommitted
+source changes.
+
+Publishable evidence includes:
 
 - SDK route coverage for SAT, TSP, knapsack/MKP, portfolio, QUBO, Max-Cut, and
   DAG optimization request surfaces.
