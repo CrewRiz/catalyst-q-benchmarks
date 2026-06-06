@@ -55,14 +55,14 @@ python3 -m venv .venv-core
 ## Remote Setup
 
 Run the `Catalyst-Q full evidence` GitHub Actions workflow manually, or let the
-weekly schedule refresh the artifact. The workflow installs the remote profile,
-runs the harness, uploads a GitHub artifact, and publishes the latest evidence
-files to R2 when these repository settings exist:
+weekly schedule refresh the artifact. The public workflow is intentionally
+secretless: it installs the remote profile, runs the harness, and uploads a
+GitHub artifact only.
 
-- Secret `CATALYST_Q_API_KEY`, optional for paid/live API checks.
-- Secret `CLOUDFLARE_API_TOKEN`, required for R2 upload.
-- Secret `CLOUDFLARE_ACCOUNT_ID`, required for R2 upload.
-- Variable `CATALYST_Q_R2_BUCKET`, the bucket that serves public evidence.
+Do not attach Cloudflare credentials or paid Catalyst-Q API keys to this public
+benchmark repository. If public evidence needs to be mirrored into R2, do that
+from a separate private deployment workflow after reviewing the generated
+artifact.
 
 ## Claim Discipline
 

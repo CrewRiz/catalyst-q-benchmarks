@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       execute_api:
-        description: "Execute live Catalyst-Q API checks"
+        description: "Execute unauthenticated live Catalyst-Q API checks"
         required: true
-        default: "true"
+        default: "false"
         type: choice
         options: ["true", "false"]
       run_external:
@@ -32,10 +32,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     env:
-      EXECUTE_API: ${{ github.event_name == 'schedule' && 'true' || inputs.execute_api }}
+      EXECUTE_API: ${{ github.event_name == 'schedule' && 'false' || inputs.execute_api }}
       RUN_EXTERNAL: ${{ github.event_name == 'schedule' && 'true' || inputs.run_external }}
       RUN_QUANTUM_TESTS: ${{ github.event_name == 'schedule' && 'false' || inputs.run_quantum_tests }}
-      HAS_CF_R2_CONFIG: ${{ secrets.CLOUDFLARE_API_TOKEN != '' && secrets.CLOUDFLARE_ACCOUNT_ID != '' && vars.CATALYST_Q_R2_BUCKET != '' }}
 
     steps:
       - name: Check out benchmark repository
@@ -57,8 +56,6 @@ jobs:
 
       - name: Build evidence package
         shell: bash -el {0}
-        env:
-          CATALYST_Q_API_KEY: ${{ secrets.CATALYST_Q_API_KEY }}
         run: |
           FLAGS=(--output-dir results)
           if [ "$EXECUTE_API" = "true" ]; then
@@ -82,25 +79,3 @@ jobs:
             results/full_evidence_scorecard.svg
             results/raw/**/*.jsonl
           if-no-files-found: warn
-
-      - name: Publish evidence artifacts to Cloudflare R2
-        if: ${{ env.HAS_CF_R2_CONFIG == 'true' }}
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: >
-            r2 object put
-            ${{ vars.CATALYST_Q_R2_BUCKET }}/public-evidence/latest/full_evidence_package.json
-            --file results/full_evidence_package.json
-
-      - name: Publish scorecard to Cloudflare R2
-        if: ${{ env.HAS_CF_R2_CONFIG == 'true' }}
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: >
-            r2 object put
-            ${{ vars.CATALYST_Q_R2_BUCKET }}/public-evidence/latest/full_evidence_scorecard.svg
-            --file results/full_evidence_scorecard.svg
