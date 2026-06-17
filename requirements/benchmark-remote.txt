@@ -9,7 +9,11 @@ scipy>=1.12
 pyarrow>=16.0
 ortools>=9.10
 python-sat[pblib,aiger]>=1.8.dev0
-tsplib95>=0.7
+# tsplib95 removed: it pins networkx~=2.0, which conflicts with networkx>=3.2
+# (benchmark-core.txt, required by qiskit/dwave) -> pip ResolutionImpossible.
+# The package is unused — TSPLIB instances are fetched from raw URLs and parsed
+# directly (see results/official_corpora/tsplib95/). Re-add via `--no-deps` only
+# if a maintained, networkx-3-compatible loader is needed.
 vrplib>=1.5
 pulp>=2.9
 mip>=1.15
