@@ -36,6 +36,17 @@ Every new benchmark packet should include:
 - Reproduction command or reviewer pathway that does not expose implementation
   details.
 
+## Reporting Norms
+
+Use the same evidence threshold for every new target:
+
+- Submitted results are not accepted results until the upstream project says so.
+- Experimental or category-mismatched comparisons must be labeled clearly.
+- Every comparison needs a stated basis: suite version, metric, category,
+  scoring path, and artifact source.
+- Reviewer-facing packets should reveal enough context to evaluate the benchmark
+  without revealing backend implementation details.
+
 ## Anti-Goals
 
 - Do not chase every benchmark at once.
@@ -50,3 +61,13 @@ Every new benchmark packet should include:
 2. QED-C Level 4-5 pilot packet, if runtime and scoring remain stable.
 3. SuperMarQ expansion to Hamiltonian Simulation and QAOA-style workloads.
 4. MQT Bench representative circuit matrix with 5-10 named circuits.
+
+## Reference Links
+
+- Metriq: https://metriq.info/
+- Metriq-gym benchmark docs: https://unitaryfoundation.github.io/metriq-gym/benchmarks/overview/
+- QED-C Application-Oriented Benchmarks: https://github.com/SRI-International/QC-App-Oriented-Benchmarks
+- SuperMarQ docs: https://superstaq.readthedocs.io/en/v0.5.26/apps/supermarq/supermarq.html
+- MQT Bench: https://github.com/munich-quantum-toolkit/bench
+- SPEC Fair Use Rules: https://www.spec.org/products/fairuse/
+- MLCommons inference submission guide: https://docs.mlcommons.org/inference/submission/

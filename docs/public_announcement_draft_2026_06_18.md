@@ -2,6 +2,9 @@
 
 Date: 2026-06-18
 
+Status: draft. Use as a request-for-review post unless Metriq review or
+independent review has advanced enough to support a stronger announcement.
+
 ## Short Version
 
 Catalyst-Q now has a public quantum benchmark evidence packet as a virtual
@@ -51,6 +54,12 @@ What this is not:
 The useful next step is scrutiny. I am looking for reviewers who can evaluate
 benchmark validity, scoring interpretation, category fit, and the next
 reproduction targets.
+
+Reference context:
+
+- Metriq: https://metriq.info/
+- Metriq-gym benchmark docs: https://unitaryfoundation.github.io/metriq-gym/benchmarks/overview/
+- Evidence packet: `docs/quantum_benchmark_evidence_2026_06_18.md`
 
 ## Outreach DM
 

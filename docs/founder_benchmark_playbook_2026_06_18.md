@@ -74,9 +74,31 @@ benchmark artifacts.
 - Say "under review" until upstream acceptance.
 - Say "virtual backend/simulator" unless a reviewer explicitly asks about
   taxonomy.
+- Do not introduce alternate public taxonomy labels until category-fit review
+  supports them.
 - Lead with reproducible artifacts, not theory.
 - Keep all charts backed by committed source data.
 - Treat every skeptical question as useful diligence input.
+
+## June 2026 Reporting Basis
+
+The operating posture in this playbook follows current public benchmark norms:
+
+- Metriq's 2026 platform is built around reproducible execution, transparent
+  provenance, public dataset review, and constructive community review.
+- Metriq encourages direct result contributions through the metriq-gym upload
+  workflow, with ibm_torino used as a normalization anchor for the score scale.
+- Mature benchmark organizations separate submitted or estimated results from
+  accepted/compliant results, require clear comparison basis, and require enough
+  context for readers to understand category fit.
+
+Public references:
+
+- Metriq 2026 platform release: https://unitary.foundation/posts/2026_metriq_platform/
+- Metriq site and FAQ: https://metriq.info/
+- Metriq-gym benchmark docs: https://unitaryfoundation.github.io/metriq-gym/benchmarks/overview/
+- SPEC Fair Use Rules: https://www.spec.org/products/fairuse/
+- MLCommons inference submission guide: https://docs.mlcommons.org/inference/submission/
 
 ## Escalation Trigger
 
@@ -87,3 +109,6 @@ least one of the following happens:
 - An independent reviewer reproduces or validates the benchmark interpretation.
 - A design partner requests a private benchmark evaluation against their own
   workload.
+
+Keep the public announcement draft unpublished until one of those triggers is
+met or the founder explicitly approves a lower-key "request for review" post.

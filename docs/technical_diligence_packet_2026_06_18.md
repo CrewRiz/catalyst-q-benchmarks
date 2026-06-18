@@ -58,3 +58,24 @@ Use this wording when sharing the packet:
 The right review posture is skeptical and artifact-first. The benchmark evidence
 should stand or fall on public records, reproducibility, scoring interpretation,
 and category clarity, without relying on private architecture claims.
+
+## Reporting Basis
+
+This packet follows June 2026 benchmark-reporting norms:
+
+- Treat Metriq results as submitted evidence until upstream review completes.
+- State the benchmark suite, category, source artifacts, scoring basis, and
+  exclusions.
+- Avoid comparing unlike categories without explicitly naming the category
+  boundary.
+- Keep the chartable number tied to committed or linked source data.
+- Preserve enough public context for a reviewer to understand the comparison
+  without requiring backend implementation details.
+
+References:
+
+- Metriq 2026 platform release: https://unitary.foundation/posts/2026_metriq_platform/
+- Metriq site and FAQ: https://metriq.info/
+- Metriq-gym benchmark docs: https://unitaryfoundation.github.io/metriq-gym/benchmarks/overview/
+- SPEC Fair Use Rules: https://www.spec.org/products/fairuse/
+- MLCommons inference submission guide: https://docs.mlcommons.org/inference/submission/
