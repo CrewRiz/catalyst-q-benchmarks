@@ -49,3 +49,10 @@ Artifacts:
 - `docs/quantum_benchmark_evidence_2026_06_18.md`
 - `results/quantum_benchmark_20260618/qedc_level_1_3_summary.json`
 - `results/quantum_benchmark_20260618/supermarq_smoke.json`
+
+Founder and review materials:
+
+- `docs/founder_benchmark_playbook_2026_06_18.md`
+- `docs/technical_diligence_packet_2026_06_18.md`
+- `docs/benchmark_expansion_targets_2026_06_18.md`
+- `docs/public_announcement_draft_2026_06_18.md`
