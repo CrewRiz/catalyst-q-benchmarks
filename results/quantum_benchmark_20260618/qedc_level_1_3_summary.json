@@ -1,0 +1,72 @@
+{
+  "packet": "catalyst-q-quantum-benchmark-evidence-20260618",
+  "run_date": "2026-06-18",
+  "suite": "QED-C Application-Oriented Benchmarks",
+  "backend": "Catalyst-Q",
+  "category": "virtual quantum execution backend/simulator",
+  "claim_scope": "application-benchmark reproduction",
+  "public_safe": true,
+  "scope_boundary": "Virtual backend/simulator benchmark fidelity results; not physical QPU, cryptanalysis, broad advantage, or universal circuit-exactness claims.",
+  "results": [
+    {
+      "benchmark": "bernstein_vazirani",
+      "widths": [3, 4, 5, 6],
+      "per_width_fidelity": {
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0,
+        "6": 1.0
+      },
+      "mean_fidelity": 1.0,
+      "source_checksum_sha256": "683bc2ddfe2f4383f304d9c8a0d3210cbc3424e58582ee3ab395d937a669827a"
+    },
+    {
+      "benchmark": "hidden_shift",
+      "widths": [2, 4, 6],
+      "per_width_fidelity": {
+        "2": 1.0,
+        "4": 1.0,
+        "6": 1.0
+      },
+      "mean_fidelity": 1.0,
+      "source_checksum_sha256": "ba266b81c76068aeddc9c922dba0eae49318a8a25d968ab08806fcefbbd60fca"
+    },
+    {
+      "benchmark": "quantum_fourier_transform",
+      "widths": [2, 3, 4, 5, 6],
+      "per_width_fidelity": {
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0,
+        "6": 1.0
+      },
+      "mean_fidelity": 1.0,
+      "source_checksum_sha256": "1af5894a6c7f00efa729f02d784339e46290b14d887e0642a8eb97bcb7848ebd"
+    },
+    {
+      "benchmark": "phase_estimation",
+      "widths": [3, 4, 5, 6],
+      "per_width_fidelity": {
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0,
+        "6": 1.0
+      },
+      "mean_fidelity": 1.0,
+      "source_checksum_sha256": "5d0e8950d77da19004fa943053de9b9cccf2cbbea7d81ab63fb3565f81758f0d"
+    },
+    {
+      "benchmark": "grovers",
+      "widths": [2, 3, 4, 5],
+      "per_width_fidelity": {
+        "2": 1.0,
+        "3": 0.998621,
+        "4": 0.997708,
+        "5": 0.999146
+      },
+      "mean_fidelity": 0.998869,
+      "source_checksum_sha256": "e5cc1ebb1c31b7c83386aa7d67b8c0dcf59d5e5350d515588ed4cae2b9892935"
+    }
+  ]
+}

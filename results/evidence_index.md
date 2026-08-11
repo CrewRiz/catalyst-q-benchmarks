@@ -31,3 +31,28 @@ This report is generated from `benchmarks/suites.json`. It is a readiness report
 - Commit validator outputs and instance checksums.
 - Generate objective, gap, runtime, and cost charts from raw artifacts.
 - Promote claims only through the claims ladder in `docs/claims_policy.md`.
+
+## Quantum Benchmark Evidence
+
+The 2026-06-18 quantum benchmark packet records public-safe Catalyst-Q evidence as
+a virtual quantum execution backend/simulator:
+
+- Metriq submission under review: unitaryfoundation/metriq-data#459. The smaller
+  #458 fallback was closed as superseded.
+- QED-C Level 1-3 reproduction: four benchmark families at 1.000000 mean fidelity
+  and Grover's Search at 0.998869 mean fidelity.
+- SuperMarQ smoke: GHZ-4 at 0.999600, GHZ-6 at 0.998975, Mermin-Bell-4 at
+  1.000000, and Mermin-Bell-6 at 1.000000.
+
+Artifacts:
+
+- `docs/quantum_benchmark_evidence_2026_06_18.md`
+- `results/quantum_benchmark_20260618/qedc_level_1_3_summary.json`
+- `results/quantum_benchmark_20260618/supermarq_smoke.json`
+
+Founder and review materials:
+
+- `docs/founder_benchmark_playbook_2026_06_18.md`
+- `docs/technical_diligence_packet_2026_06_18.md`
+- `docs/benchmark_expansion_targets_2026_06_18.md`
+- `docs/public_announcement_draft_2026_06_18.md`

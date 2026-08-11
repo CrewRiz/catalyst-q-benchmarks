@@ -1,0 +1,88 @@
+{
+  "packet": "catalyst-q-quantum-benchmark-evidence-20260618",
+  "run_date": "2026-06-18",
+  "suite": "SuperMarQ",
+  "backend": "Catalyst-Q",
+  "category": "virtual quantum execution backend/simulator",
+  "claim_scope": "smoke benchmark reproduction",
+  "public_safe": true,
+  "shots": 500,
+  "source_checksum_sha256": "0fd555bc099071c17312519edf871d9217dc546ab3da7a35ebc5be0cc8fd3e27",
+  "scope_boundary": "Virtual backend/simulator benchmark smoke results; not physical QPU, cryptanalysis, broad advantage, or universal circuit-exactness claims.",
+  "results": [
+    {
+      "benchmark": "ghz_4",
+      "qubits": 4,
+      "shots": 500,
+      "score": 0.9996,
+      "elapsed_seconds": 0.19829,
+      "counts": {
+        "1111": 240,
+        "0000": 260
+      },
+      "features": {
+        "communication": 0.5,
+        "depth": 1.0,
+        "entanglement": 0.75,
+        "liveness": 0.55,
+        "measurement": 0.0,
+        "parallelism": 0.0
+      }
+    },
+    {
+      "benchmark": "ghz_6",
+      "qubits": 6,
+      "shots": 500,
+      "score": 0.998975,
+      "elapsed_seconds": 0.224857,
+      "counts": {
+        "111111": 234,
+        "000000": 266
+      },
+      "features": {
+        "communication": 0.333333,
+        "depth": 1.0,
+        "entanglement": 0.833333,
+        "liveness": 0.404762,
+        "measurement": 0.0,
+        "parallelism": 0.0
+      }
+    },
+    {
+      "benchmark": "mermin_bell_4",
+      "qubits": 4,
+      "shots": 500,
+      "score": 1.0,
+      "elapsed_seconds": 0.188743,
+      "counts": {
+        "0001": 500
+      },
+      "features": {
+        "communication": 1.0,
+        "depth": 0.923077,
+        "entanglement": 0.52,
+        "liveness": 0.583333,
+        "measurement": 0.0,
+        "parallelism": 0.12963
+      }
+    },
+    {
+      "benchmark": "mermin_bell_6",
+      "qubits": 6,
+      "shots": 500,
+      "score": 1.0,
+      "elapsed_seconds": 0.273172,
+      "counts": {
+        "000001": 500
+      },
+      "features": {
+        "communication": 1.0,
+        "depth": 0.814815,
+        "entanglement": 0.6,
+        "liveness": 0.464286,
+        "measurement": 0.0,
+        "parallelism": 0.121429
+      }
+    }
+  ]
+}

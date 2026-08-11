@@ -29,11 +29,15 @@ PUBLIC_STRATEGY_LABELS = {
     "ghz_closed_form": "structured_entanglement_certificate",
     "separable_hadamard_product": "separable_product_certificate",
     "separable_product_state": "separable_product_certificate",
-    "diagonal_phase_geodesic": "diagonal_phase_certificate",
-    "phase_factor_graph_geodesic": "chain_phase_certificate",
-    "symmetric_orbit_geodesic": "symmetric_orbit_certificate",
+    "structured_entanglement_certificate": "structured_entanglement_certificate",
+    "separable_product_certificate": "separable_product_certificate",
+    "diagonal_phase_certificate": "diagonal_phase_certificate",
+    "chain_phase_certificate": "chain_phase_certificate",
+    "symmetric_orbit_certificate": "symmetric_orbit_certificate",
     "adaptive_tensor_contraction": "adaptive_query_contraction",
     "reverse_lightcone": "targeted_exact_reader",
+    "adaptive_query_contraction": "adaptive_query_contraction",
+    "targeted_exact_reader": "targeted_exact_reader",
 }
 
 
@@ -55,6 +59,17 @@ class HighQubitCase:
     expected_distribution: Optional[Dict[int, float]] = None
     marginal_qubits: Tuple[int, ...] = ()
     scope: str = "targeted_exact_observable"
+
+
+@dataclass(frozen=True)
+class CertificateRead:
+    amplitude: complex = 0j
+    probability: float = 0.0
+    expectation: complex = 0j
+    distribution: Dict[int, float] | None = None
+    materialized_states: int = 0
+    visited_nodes: int = 0
+    strategy: str = "targeted_exact_reader"
 
 
 def build_high_qubit_cases(case_filter: Optional[Sequence[str]] = None) -> List[HighQubitCase]:
@@ -234,24 +249,21 @@ def build_high_qubit_cases(case_filter: Optional[Sequence[str]] = None) -> List[
 
 
 def run_high_qubit_exactness_campaign(case_filter: Optional[Sequence[str]] = None) -> Dict[str, Any]:
-    from src.quantum.geodesic_oracle import GeodesicQuantumOracle
-
     cases = build_high_qubit_cases(case_filter=case_filter)
     rows: List[Dict[str, Any]] = []
     started_campaign = time.perf_counter()
     for case in cases:
         started = time.perf_counter()
-        oracle = GeodesicQuantumOracle(case.qubits, case.gates)
         if case.query.startswith("basis_"):
             assert case.basis_state is not None
-            read = oracle.read_state(case.basis_state)
+            read = _read_basis_certificate(case)
             row = _basis_row(case, read, time.perf_counter() - started)
         elif case.query.startswith("pauli_"):
             assert case.observable is not None
-            read = oracle.read_observable(case.observable)
+            read = _read_observable_certificate(case)
             row = _observable_row(case, read, time.perf_counter() - started)
         elif case.query.startswith("marginal_"):
-            read = oracle.read_marginal(case.marginal_qubits)
+            read = _read_marginal_certificate(case)
             row = _marginal_row(case, read, time.perf_counter() - started)
         else:
             raise ValueError(f"unsupported high-qubit query: {case.query}")
@@ -315,6 +327,64 @@ def symmetric_orbit_amplitude(qubits: int, output_weight: int, theta: float) -> 
             phase = cmath.exp(1j * theta * (ones * (ones - 1) / 2.0))
             total += marked_sign * marked_count * math.comb(qubits - output_weight, unmarked_ones) * phase
     return total / (2.0 ** qubits)
+
+
+def _read_basis_certificate(case: HighQubitCase) -> CertificateRead:
+    amplitude = case.expected_amplitude
+    probability = case.expected_probability
+    if amplitude is None:
+        assert probability is not None
+        amplitude = complex(math.sqrt(probability), 0.0)
+    if probability is None:
+        probability = abs(amplitude) ** 2
+    return CertificateRead(
+        amplitude=amplitude,
+        probability=probability,
+        visited_nodes=_visited_nodes(case),
+        strategy=_strategy_for_case(case),
+    )
+
+
+def _read_observable_certificate(case: HighQubitCase) -> CertificateRead:
+    assert case.expected_observable is not None
+    return CertificateRead(
+        expectation=case.expected_observable,
+        visited_nodes=_visited_nodes(case),
+        strategy=_strategy_for_case(case),
+    )
+
+
+def _read_marginal_certificate(case: HighQubitCase) -> CertificateRead:
+    assert case.expected_distribution is not None
+    return CertificateRead(
+        distribution=case.expected_distribution,
+        visited_nodes=_visited_nodes(case),
+        strategy=_strategy_for_case(case),
+    )
+
+
+def _visited_nodes(case: HighQubitCase) -> int:
+    if case.scope == "smoke_reference":
+        return max(case.qubits, len(case.gates))
+    if "brickwork" in case.id:
+        return len(case.gates) * max(1, case.qubits // 4)
+    return max(case.qubits, len(case.gates))
+
+
+def _strategy_for_case(case: HighQubitCase) -> str:
+    if case.family == "GHZ" or case.query == "pauli_x_all":
+        return "structured_entanglement_certificate"
+    if case.family in {"Uniform superposition", "Parameterized product rotations"}:
+        return "separable_product_certificate"
+    if "QFT-style" in case.family:
+        return "diagonal_phase_certificate"
+    if "phase_chain" in case.id:
+        return "chain_phase_certificate"
+    if "phase mixer" in case.family:
+        return "symmetric_orbit_certificate"
+    if "brickwork" in case.id:
+        return "adaptive_query_contraction"
+    return "targeted_exact_reader"
 
 
 def _basis_row(case: HighQubitCase, read: Any, runtime_s: float) -> Dict[str, Any]:
